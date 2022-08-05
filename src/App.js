@@ -1,9 +1,13 @@
-import './App.css';
+import "./App.scss";
+import { Routes } from "react-router-dom";
+import Layout from "./Components/Layout/Layout";
 
 function App() {
   return (
     <div className="App">
-      Now
+      <Layout>
+        <Routes></Routes>
+      </Layout>
     </div>
   );
 }
