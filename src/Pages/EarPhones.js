@@ -1,5 +1,5 @@
 const EarPhones = () => {
-  return;
+  return <div>EarPhones</div>
 };
 
 export default EarPhones;

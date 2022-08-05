@@ -1,0 +1,19 @@
+header {
+  background-color: #000000;
+  color: #fff;
+
+  & .container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgb(185, 177, 177);
+    margin: 0 auto;
+  }
+}
+
+.icon {
+  height: 2.2rem;
+  width: 2.2rem;
+  margin-left: 1.5rem;
+}
