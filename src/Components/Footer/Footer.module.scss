@@ -1,0 +1,117 @@
+@import "../../scss/mixin";
+@import "../../scss/base";
+
+.footer {
+  z-index: 2;
+}
+
+footer {
+  background-color: $color-black;
+  color: $color-white;
+  padding: 0rem 15rem 5rem;
+  position: relative;
+
+  @include respond(laptop) {
+    padding: 0 10rem 5rem;
+  }
+
+  @include respond(miniTablet) {
+    padding: 0 5rem 5rem;
+  }
+
+  & .first-div {
+    width: 100%;
+
+    & .color-div-box {
+      width: 12%;
+      height: 0.5rem;
+      background-color: $color-primary;
+    }
+  }
+
+  & .second-div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 4rem 0;
+
+    @include respond(midphone) {
+      flex-direction: column-reverse;
+      margin: 1rem 0;
+    }
+
+    & .nav-div {
+      margin-left: auto;
+
+      @include respond(midphone) {
+        margin: 1.5rem 0;
+      }
+      @include respond(smallphone) {
+        align-self: flex-start;
+      }
+    }
+
+    & .logo-div {
+      @include respond(midphone) {
+        align-self: center;
+        margin: 2rem 0 0;
+      }
+    }
+  }
+
+  & .copyright-div p {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+
+    @include respond(midphone) {
+      text-align: center;
+    }
+  }
+}
+
+.footer-auto-box {
+  display: flex;
+  margin: 1.5rem 0 3rem;
+
+  @include respond(midphone) {
+    flex-direction: column;
+  }
+}
+
+.text-div {
+  display: flex;
+  width: 60%;
+
+  @include respond(midphone) {
+    width: 100%;
+    text-align: center;
+  }
+
+  & p {
+    font-size: 1.6rem;
+  }
+}
+
+.icon-div {
+  display: flex;
+  width: 40%;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-right: 1rem;
+
+  @include respond(midphone) {
+    width: 100%;
+    justify-content: center;
+    margin: 4rem 1rem 1rem 0;
+  }
+
+  & a {
+    color: $color-white;
+  }
+
+  & .icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-left: 1rem;
+  }
+}

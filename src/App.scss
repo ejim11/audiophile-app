@@ -1,4 +1,5 @@
 @import "./scss/base";
+@import "./scss/mixin";
 
 *,
 *::before,
@@ -10,9 +11,57 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; //1rem = 10px
+  font-size: 100%; //1rem = 16px
+
+  @include respond(bigLaptop) {
+    font-size: 87.5%; //1rem = 14px
+  }
+  @include respond(medLaptop) {
+    font-size: 75%; //1rem = 12px
+  }
+  @include respond(laptop) {
+    font-size: 62.5%; //1rem = 10px
+  }
+
+  @include respond(tablet) {
+    font-size: 56.25%; //1rem = 10px
+  }
 }
 
 body {
   font-family: $font-display;
+  background-color: rgb(250, 250, 250);
+}
+
+.App {
+  position: relative;
+}
+img {
+  max-width: 100%;
+}
+
+.swiper-pagination-bullet {
+  background-color: $color-white !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-primary !important;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $color-black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $color-primary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

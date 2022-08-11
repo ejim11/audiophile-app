@@ -1,0 +1,19 @@
+@import "../../../scss/mixin";
+
+.auto-fit-box {
+  display: grid;
+}
+
+.advert-box {
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-column-gap: 8rem;
+
+  @include respond(miniTablet) {
+    grid-column-gap: 4rem;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}

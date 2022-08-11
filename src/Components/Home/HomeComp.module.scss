@@ -1,0 +1,178 @@
+@import "../../scss/mixin";
+@import "../../scss/base";
+
+.swipe-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+  background-color: aliceblue;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.swipe-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+
+  @include respond(tablet) {
+    width: 90%;
+    align-items: center;
+    text-align: center;
+  }
+
+  & h3 {
+    font-weight: 300;
+    font-size: 1.4rem;
+    letter-spacing: 1rem;
+    color: rgb(214, 184, 172);
+  }
+
+  & .title {
+    width: 40%;
+    margin: 2rem 0;
+    font-size: 5rem;
+    font-weight: 700;
+
+    @include respond(tablet) {
+      width: 100%;
+    }
+    @include respond(tinyphone) {
+      font-size: 3rem;
+    }
+  }
+  & .description {
+    width: 30%;
+    margin-bottom: 3rem;
+
+    @include respond(tablet) {
+      width: 70%;
+      margin: 0 auto 3rem;
+    }
+  }
+}
+
+.shop-list-section {
+  position: relative;
+  z-index: 5;
+  margin: calc(100vh - 83px) auto 0;
+  padding: 12rem 0rem;
+
+  width: 60%;
+
+  @include respond(bigLaptop) {
+    width: 70%;
+  }
+
+  @include respond(laptop) {
+    width: 75%;
+  }
+
+  @include respond(tablet) {
+    width: 80%;
+  }
+
+  @include respond(miniTablet) {
+    width: 90%;
+  }
+}
+
+.product-sample-section {
+  position: relative;
+  z-index: 5;
+  width: 60%;
+  margin: 0 auto 10rem;
+
+  @include respond(bigLaptop) {
+    width: 70%;
+  }
+
+  @include respond(laptop) {
+    width: 75%;
+  }
+  @include respond(tablet) {
+    width: 80%;
+  }
+  @include respond(miniTablet) {
+    width: 90%;
+  }
+}
+
+.advert-section {
+  position: relative;
+  z-index: 5;
+  width: 60%;
+  margin: 0 auto 15rem;
+  @include respond(bigLaptop) {
+    width: 70%;
+  }
+
+  @include respond(laptop) {
+    width: 75%;
+  }
+  @include respond(tablet) {
+    width: 80%;
+  }
+  @include respond(miniTablet) {
+    width: 90%;
+  }
+}
+
+.slide-1 {
+  background-image: url("../../assets/home/desktop/image-hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include respond(tablet) {
+    background-image: url("../../assets/home/tablet/image-header.jpg");
+  }
+
+  @include respond(phone) {
+    background-image: url("../../assets/home/mobile/image-header.jpg");
+  }
+}
+.slide-2 {
+  background-image: url("../../assets/home/desktop/pexels-daniel-reche-3721941\ \(3\).jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include respond(tablet) {
+    background-image: url("../../assets/home/tablet/pexels-daniel-reche-3721941\ \(2\).jpg");
+  }
+
+  @include respond(phone) {
+    background-image: url("../../assets/home/mobile/pexels-daniel-reche-3721941.jpg");
+  }
+}
+.slide-3 {
+  background-image: url("../../assets/home/desktop/headphones-3916271.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include respond(tablet) {
+    background-image: url("../../assets/home/tablet/headphones-3916271_1280.jpg");
+  }
+
+  @include respond(phone) {
+    background-image: url("../../assets/home/mobile/headphones-3916271_640.jpg");
+  }
+}

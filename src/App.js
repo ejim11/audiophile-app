@@ -7,8 +7,8 @@ import Home from "./Pages/Home";
 import Headphones from "./Pages/Headphones";
 import EarPhones from "./Pages/EarPhones";
 import Speakers from "./Pages/Speakers";
-import Category from "./Pages/Category";
-import Products from "./Pages/Products";
+import ProductDetail from "./Pages/ProductDetail";
+import Contact from "./Pages/Contact";
 
 function App() {
   return (
@@ -18,11 +18,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/headphones" element={<Headphones />} />
-          <Route path="/ear phones" element={<EarPhones />} />
-          <Route path="/" element={<Speakers />} />
-          <Route path="/category/:categoryId" element={<Category />} />
-          <Route path="/product/:productId" element={<Products />} />
+          <Route path="/category/headphones" element={<Headphones />} />
+          <Route path="/category/earphones" element={<EarPhones />} />
+          <Route path="/category/speakers" element={<Speakers />} />
+          <Route path="/product/:productId" element={<ProductDetail />} />
+          <Route path="contact" element={<Contact />} />
         </Routes>
       </Layout>
     </div>

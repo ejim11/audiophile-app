@@ -1,0 +1,157 @@
+@import "../../scss/mixin";
+@import "../../scss/base";
+
+.sample-1 {
+  width: 100%;
+  background: url("../../assets/home/desktop/pattern-circles.svg"),
+    $color-primary;
+  display: flex;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 6.5rem 4rem;
+  align-items: center;
+  border-radius: 1rem;
+  color: #fff;
+  overflow: hidden;
+
+  @include respond(midphone) {
+    flex-direction: column;
+  }
+
+  &-box {
+    &-1 {
+      display: flex;
+      @include respond(midphone) {
+        justify-content: center;
+      }
+    }
+    &-2 {
+      padding: 0 3rem;
+
+      @include respond(midphone) {
+        text-align: center;
+        margin: 2rem 0;
+      }
+      & h3 {
+        font-size: 5rem;
+        font-weight: 700;
+
+        @include respond(midphone) {
+          font-size: 4.5rem;
+        }
+      }
+
+      & p {
+        font-size: 1.6rem;
+        margin: 1rem 0 3.5rem;
+      }
+    }
+
+    &-img {
+      width: 80%;
+      margin-bottom: -10rem;
+      margin-left: auto;
+      margin-right: 5rem;
+
+      @include respond(phone) {
+        margin-bottom: -16rem;
+      }
+
+      @include respond(midphone) {
+        margin: 0rem;
+        width: 40%;
+      }
+    }
+  }
+}
+
+.sample-2 {
+  background-image: url("../../assets/home/desktop/image-speaker-zx7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+  margin: 5rem 0;
+  padding: 0 10rem;
+  height: 35rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  @include respond(tablet) {
+    background-image: url("../../assets/home/tablet/image-speaker-zx7.jpg");
+    background-position: 100% 100%;
+  }
+
+  @include respond(phone) {
+    background-image: url("../../assets/home/mobile/image-speaker-zx7.jpg");
+    background-position: 100% 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  & h3 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.sample-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-column-gap: 3rem;
+
+  @include respond(tinyphone) {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+
+  &-box-1,
+  &-box-2 {
+    border-radius: 1rem;
+
+    & img {
+      border-radius: 1rem;
+    }
+  }
+
+  &-box-1 {
+    background-image: url("../../assets/home/desktop/image-earphones-yx1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+
+    @include respond(tablet) {
+      background-image: url("../../assets/home/tablet/image-earphones-yx1.jpg");
+    }
+
+    @include respond(phone) {
+      background-image: url("../../assets/home/mobile/image-earphones-yx1.jpg");
+    }
+
+    @include respond(smallphone) {
+      height: 25rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &-box-2 {
+    background-color: rgb(241, 241, 241);
+    padding: 4rem 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    @include respond(phone) {
+      align-items: center;
+      text-align: center;
+    }
+
+    & h3 {
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

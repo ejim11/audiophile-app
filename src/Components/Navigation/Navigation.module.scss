@@ -1,19 +1,33 @@
-.nav-active {
-  color: orangered;
+@import "../../scss/mixin";
+@import "../../scss/base";
+
+.header-nav-active {
+  color: $color-primary;
 }
 
-.nav-inactive {
-  color: #fff;
+.header-nav-inactive {
+  color: $color-white;
 }
 .header-nav {
-  margin: 0 auto;
+  @include respond(miniTablet) {
+    width: 100%;
+    height: 100%;
+  }
+
   & ul {
     display: flex;
     list-style-type: none;
 
+    @include respond(miniTablet) {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+    }
+
     & li {
       margin: 0 1rem;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       & a {
         text-decoration: none;
         display: block;
@@ -21,4 +35,50 @@
       }
     }
   }
+}
+
+.footer-nav {
+  & ul {
+    display: flex;
+    list-style-type: none;
+
+    @include respond(smallphone) {
+      flex-direction: column;
+    }
+
+    & li {
+      margin: 0 1rem;
+      font-size: 1.6rem;
+      @include respond(smallphone) {
+        margin: 0;
+      }
+      & a {
+        text-decoration: none;
+        display: block;
+        padding: 1rem 0;
+      }
+    }
+  }
+}
+
+.footer-nav-active {
+  color: $color-primary;
+}
+
+.footer-nav-inactive {
+  color: $color-white;
+}
+
+.header-nav .times-icon {
+  display: none;
+  @include respond(miniTablet) {
+    display: block;
+    width: 2.3rem;
+    height: 2.3rem;
+    margin: 3rem 3rem 6rem auto;
+  }
+}
+
+.footer-nav .times-icon {
+  display: none;
 }
