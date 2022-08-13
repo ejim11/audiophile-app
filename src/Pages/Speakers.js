@@ -1,5 +1,15 @@
+import SpeakersComp from "../Components/Speakers/SpeakersComp";
+import { useEffect } from "react";
+
 const Speakers = () => {
-  return <div>SPEAKERS</div>;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return (
+    <>
+      <SpeakersComp />
+    </>
+  );
 };
 
 export default Speakers;

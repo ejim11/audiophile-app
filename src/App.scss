@@ -65,3 +65,200 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+// advert styling
+.advert-section {
+  position: relative;
+  z-index: 5;
+  width: 60%;
+  margin: 0 auto 15rem;
+  @include respond(bigLaptop) {
+    width: 70%;
+  }
+
+  @include respond(laptop) {
+    width: 75%;
+  }
+  @include respond(tablet) {
+    width: 80%;
+  }
+  //   @include respond(miniTablet) {
+  //     width: 90%;
+  //   }
+}
+
+.advert-box {
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-column-gap: 8rem;
+
+  @include respond(miniTablet) {
+    grid-column-gap: 4rem;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.advert-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  & h3 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 1rem 0;
+
+    & span {
+      color: $color-primary;
+    }
+  }
+
+  & p {
+    font-size: 1.7rem;
+  }
+}
+
+.advert-img {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  border-radius: 1rem;
+
+  @include respond(phone) {
+    margin: 2rem auto;
+  }
+
+  & img {
+    border-radius: 1rem;
+  }
+}
+// shop-list styling
+.margin-ut {
+  margin: calc(100vh - 83px) auto 0;
+}
+
+.margin-sa {
+  margin: 3rem auto 0;
+}
+.shop-list-section {
+  position: relative;
+  z-index: 5;
+  padding: 12rem 0rem;
+
+  width: 60%;
+
+  @include respond(bigLaptop) {
+    width: 70%;
+  }
+
+  @include respond(laptop) {
+    width: 75%;
+  }
+
+  @include respond(tablet) {
+    width: 80%;
+  }
+
+  @include respond(miniTablet) {
+    width: 90%;
+  }
+}
+
+.shop-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-column-gap: 2rem;
+}
+
+.box {
+  background-color: rgb(241, 241, 241);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 3rem;
+  border-radius: 1rem;
+  margin: 3rem;
+
+  &-img {
+    width: 16rem;
+    margin-top: -5rem;
+  }
+
+  & p {
+    margin-top: auto;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: $color-black;
+  }
+
+  & a {
+    color: rgb(85, 81, 81);
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    display: flex;
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover {
+      color: orange;
+    }
+
+    & .icon {
+      fill: orange;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+.absolute-div {
+  position: absolute;
+  top: 0;
+  background-color: $color-black;
+  color: $color-white;
+  width: 100%;
+  height: 22rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 6rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.first-div {
+  position: relative;
+  z-index: 2;
+  margin-top: 13rem;
+}
+
+.img-first-auto-box,
+.text-first-auto-box {
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-column-gap: 6rem;
+  margin-bottom: 6rem;
+}
+
+.img-first-auto-box {
+  & .product-text {
+    order: 2;
+
+    @include respond(midphone) {
+      order: 1;
+    }
+  }
+
+  & .product-img {
+    order: 1;
+    @include respond(midphone) {
+      order: 2;
+    }
+  }
+}

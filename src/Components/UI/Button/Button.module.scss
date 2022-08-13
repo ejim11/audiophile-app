@@ -8,7 +8,7 @@
   transition: all 0.2s ease-in;
 }
 
-.btn-swipe {
+.btn-sample-3 {
   align-self: flex-start;
   color: $color-white;
   background-color: $color-primary;
@@ -42,6 +42,16 @@
 
   &:hover {
     color: $color-white;
+    background-color: $color-black;
+  }
+}
+.btn-sample-4 {
+  color: $color-white;
+  background-color: $color-primary;
+  border: none;
+
+  &:hover {
+    color: $color-primary;
     background-color: $color-black;
   }
 }

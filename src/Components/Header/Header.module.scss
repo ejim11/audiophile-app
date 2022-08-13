@@ -3,7 +3,7 @@
 
 header {
   position: relative;
-  z-index: 3;
+  z-index: 6;
   color: $color-white;
 
   & .container {
@@ -62,7 +62,7 @@ header {
   margin: 0 auto;
 
   @include respond(miniTablet) {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;

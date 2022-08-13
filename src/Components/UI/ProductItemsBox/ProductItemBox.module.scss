@@ -1,0 +1,36 @@
+@import "../../../scss/mixin";
+@import "../../../scss/base";
+
+.product-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  @include respond(midphone) {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  & h3 {
+    font-size: 3.5rem;
+    font-weight: 800;
+  }
+
+  & p:not(.new-product) {
+    margin: 1.5rem 0 3rem;
+    font-size: 1.6rem;
+  }
+
+  & p.new-product {
+    font-size: 1.4rem;
+    letter-spacing: 0.3rem;
+    color: $color-new-product;
+  }
+}
+
+.product-img {
+  border-radius: 1.5rem;
+  overflow: hidden;
+}

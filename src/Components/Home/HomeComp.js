@@ -9,7 +9,7 @@ import Button from "../UI/Button/Button";
 import ShopList from "./ShopList";
 import ProductSample from "./ProductSample";
 import Advert from "../Home/Advert";
- const slideInfo = [
+const slideInfo = [
   {
     heading: "XX99 MARK II HEADPHONES",
     description:
@@ -37,7 +37,7 @@ const HomeComp = () => {
         <h3>NEW PRODUCT</h3>
         <p className={classes["title"]}>{item.heading}</p>
         <p className={classes["description"]}>{item.description}</p>
-        <Button className={"btn-swipe"}>SEE PRODUCT</Button>
+        <Button className={"btn-sample-3"}>SEE PRODUCT</Button>
       </div>
     </SwiperSlide>
   ));
@@ -61,16 +61,13 @@ const HomeComp = () => {
           {slides}
         </Swiper>
       </section>
-      <section className={classes["shop-list-section"]}>
+      <section className={"shop-list-section margin-ut"}>
         <ShopList />
       </section>
-      <section
-        
-        className={classes["product-sample-section"]}
-      >
+      <section className={classes["product-sample-section"]}>
         <ProductSample />
       </section>
-      <section className={classes["advert-section"]}>
+      <section className={"advert-section"}>
         <Advert />
       </section>
     </>

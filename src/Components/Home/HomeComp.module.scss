@@ -68,57 +68,12 @@
   }
 }
 
-.shop-list-section {
-  position: relative;
-  z-index: 5;
-  margin: calc(100vh - 83px) auto 0;
-  padding: 12rem 0rem;
-
-  width: 60%;
-
-  @include respond(bigLaptop) {
-    width: 70%;
-  }
-
-  @include respond(laptop) {
-    width: 75%;
-  }
-
-  @include respond(tablet) {
-    width: 80%;
-  }
-
-  @include respond(miniTablet) {
-    width: 90%;
-  }
-}
-
 .product-sample-section {
   position: relative;
   z-index: 5;
   width: 60%;
   margin: 0 auto 10rem;
 
-  @include respond(bigLaptop) {
-    width: 70%;
-  }
-
-  @include respond(laptop) {
-    width: 75%;
-  }
-  @include respond(tablet) {
-    width: 80%;
-  }
-  @include respond(miniTablet) {
-    width: 90%;
-  }
-}
-
-.advert-section {
-  position: relative;
-  z-index: 5;
-  width: 60%;
-  margin: 0 auto 15rem;
   @include respond(bigLaptop) {
     width: 70%;
   }
