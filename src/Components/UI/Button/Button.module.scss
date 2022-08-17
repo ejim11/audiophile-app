@@ -55,3 +55,39 @@
     background-color: $color-black;
   }
 }
+
+.login-btn {
+  color: $color-white;
+  background-color: rgba($color-black, 0.4);
+  border: 1px solid $color-white;
+  // border-radius: 1rem;
+
+  &:hover {
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+  }
+}
+
+.login-form-btn {
+  width: 100%;
+  margin: 2.5rem 0 0;
+  background-color: $color-black;
+  color: $color-white;
+  border: 1px solid $color-black;
+  padding: 2rem 4rem;
+  font-size: 1.7rem;
+
+  &:hover {
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:active {
+    background-color: #ccc;
+    color: $color-white;
+    border-color: #ccc;
+    cursor: not-allowed;
+  }
+}

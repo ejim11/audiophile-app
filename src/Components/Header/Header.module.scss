@@ -10,7 +10,7 @@ header {
     display: flex;
     align-items: center;
     width: 80%;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
     border-bottom: 1px solid rgb(85, 83, 83);
     margin: 0 auto;
 
@@ -29,14 +29,20 @@ header {
 }
 .name {
   font-size: 1.5rem;
-  margin-left: auto;
+  @include respond(miniTablet) {
+    margin-left: auto;
+  }
+
   @include respond(midphone) {
     display: none;
   }
 }
 
 .icon-div {
-  @include respond(midphone) {
+  display: flex;
+  align-items: center;
+
+  @include respond(miniTablet) {
     margin-left: auto;
   }
 

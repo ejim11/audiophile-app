@@ -7,7 +7,6 @@ const Links = [
   { to: "/category/headphones", text: "HEADPHONES" },
   { to: "/category/speakers", text: "SPEAKERS" },
   { to: "/category/earphones", text: "EARPHONES" },
-  { to: "/contact", text: "CONTACT" },
 ];
 
 const Navigation = (props) => {

@@ -1,0 +1,13 @@
+@import "../../scss/mixin";
+
+form {
+  width: 35%;
+
+  @include respond(tablet) {
+    width: 50%;
+  }
+
+  @include respond(midphone) {
+    width: 80%;
+  }
+}

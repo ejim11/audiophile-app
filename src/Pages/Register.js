@@ -1,5 +1,11 @@
+import RegisterComp from "../Components/Register/RegisterComp";
+
 const Register = () => {
-  return <div>REGISTER</div>;
+  return (
+    <>
+      <RegisterComp />
+    </>
+  );
 };
 
 export default Register;

@@ -1,0 +1,16 @@
+@import "../../scss/base";
+
+.login-box {
+  width: 100%;
+  height: calc(100vh - 9.3rem);
+  display: flex;
+  flex-direction: column;
+  //   justify-content: center;
+  padding-top: 5rem;
+  align-items: center;
+  & h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 3rem;
+  }
+}
