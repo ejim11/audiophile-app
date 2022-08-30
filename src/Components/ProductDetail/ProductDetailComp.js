@@ -1,4 +1,4 @@
-import { Navigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Button from "../UI/Button/Button";
 import { data } from "../../data";
 import ShopAndAdvertBox from "../UI/ShopAndAdvertBox/ShopAndAdvertBox";
@@ -8,7 +8,6 @@ import ProductGallery from "./ProductGallery/ProductGallery";
 import ProductAlternatives from "./ProductAlternatives/ProductAlternatives";
 import { useEffect } from "react";
 import classes from "./ProductDetailComp.module.scss";
-import { useNavigate } from "react-router-dom";
 
 const ProductDetailComp = () => {
   const navigate = useNavigate();

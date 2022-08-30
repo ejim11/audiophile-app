@@ -29,9 +29,12 @@ const Header = () => {
   };
 
   const checkLocation = location.pathname === "/login";
+  const checkHome = location.pathname === "/";
 
   return (
-    <header>
+    <header
+      className={checkHome ? classes["bg-transparent"] : classes["bg-black"]}
+    >
       <div className={classes.container}>
         <HiMenuAlt2
           className={classes["icon-menu-bar"]}
