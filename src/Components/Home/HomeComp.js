@@ -9,6 +9,8 @@ import Button from "../UI/Button/Button";
 import ShopList from "./ShopList";
 import ProductSample from "./ProductSample";
 import Advert from "../Home/Advert";
+import { useNavigate } from "react-router-dom";
+
 const slideInfo = [
   {
     heading: "XX99 MARK II HEADPHONES",
@@ -28,6 +30,12 @@ const slideInfo = [
 ];
 
 const HomeComp = () => {
+  const navigate = useNavigate();
+
+  const navToProduct = () => {
+    navigate("/product/xx99-mark-two-headphones");
+  };
+
   const slides = slideInfo.map((item, i) => (
     <SwiperSlide
       key={i}
@@ -37,7 +45,9 @@ const HomeComp = () => {
         <h3>NEW PRODUCT</h3>
         <p className={classes["title"]}>{item.heading}</p>
         <p className={classes["description"]}>{item.description}</p>
-        <Button className={"btn-sample-3"}>SEE PRODUCT</Button>
+        <Button className={"btn-sample-3"} onClick={navToProduct}>
+          SEE PRODUCT
+        </Button>
       </div>
     </SwiperSlide>
   ));

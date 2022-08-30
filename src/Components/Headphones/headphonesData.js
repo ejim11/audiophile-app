@@ -17,6 +17,7 @@ const headPhonesListData = [
     imgTablet: { mark2Tab },
     imgMobile: { mark2Mob },
     alt: "XX99 MARK II HEADPHONES",
+    slug: "/product/xx99-mark-two-headphones",
   },
   {
     newProduct: false,
@@ -26,6 +27,7 @@ const headPhonesListData = [
     imgTablet: { mark1Tab },
     imgMobile: { mark1Mob },
     alt: "XX99 MARK I HEADPHONES",
+    slug: "/product/xx99-mark-one-headphones",
   },
   {
     newProduct: false,
@@ -35,6 +37,7 @@ const headPhonesListData = [
     imgTablet: { xx59Tab },
     imgMobile: { xx59Mob },
     alt: "XX59 HEADPHONES",
+    slug: "/product/xx59-headphones",
   },
 ];
 

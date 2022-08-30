@@ -14,6 +14,7 @@ const speakersListData = [
     imgTablet: { zx9Tab },
     imgMobile: { zx9Mob },
     alt: "ZX9 SPEAKER",
+    slug: "/product/zx9-speaker",
   },
   {
     newProduct: false,
@@ -23,6 +24,7 @@ const speakersListData = [
     imgTablet: { zx7Tab },
     imgMobile: { zx7Mob },
     alt: "ZX7 SPEAKER",
+    slug: "/product/zx7-speaker",
   },
 ];
 

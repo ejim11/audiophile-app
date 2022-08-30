@@ -14,26 +14,26 @@ header {
     border-bottom: 1px solid rgb(85, 83, 83);
     margin: 0 auto;
 
-    @include respond(tablet) {
+    @include respond(miniLaptop) {
       width: 100%;
       padding: 2.5rem 4.5rem;
     }
-    @include respond(phone) {
+    @include respond(tablet) {
       padding: 2.5rem 2rem;
     }
 
-    @include respond(tinyphone) {
+    @include respond(smallPhone) {
       padding: 2.5rem 0.5rem;
     }
   }
 }
 .name {
   font-size: 1.5rem;
-  @include respond(miniTablet) {
+  @include respond(bigTablet) {
     margin-left: auto;
   }
 
-  @include respond(midphone) {
+  @include respond(midTablet) {
     display: none;
   }
 }
@@ -42,7 +42,7 @@ header {
   display: flex;
   align-items: center;
 
-  @include respond(miniTablet) {
+  @include respond(bigTablet) {
     margin-left: auto;
   }
 
@@ -59,7 +59,7 @@ header {
   display: none;
   cursor: pointer;
 
-  @include respond(miniTablet) {
+  @include respond(bigTablet) {
     display: block;
   }
 }
@@ -67,7 +67,7 @@ header {
 .nav-div {
   margin: 0 auto;
 
-  @include respond(miniTablet) {
+  @include respond(bigTablet) {
     position: fixed;
     top: 0;
     left: 0;
@@ -80,14 +80,14 @@ header {
 }
 
 .display-menu {
-  @include respond(miniTablet) {
+  @include respond(bigTablet) {
     transform: translateX(0%);
     opacity: 1;
   }
 }
 
 .hide-menu {
-  @include respond(miniTablet) {
+  @include respond(bigTablet) {
     transform: translateX(-100%);
     opacity: 0;
   }

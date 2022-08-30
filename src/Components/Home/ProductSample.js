@@ -2,8 +2,11 @@ import Button from "../UI/Button/Button";
 import sample from "../../assets/home/desktop/image-speaker-zx9.png";
 import classes from "./ProductSample.module.scss";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const ProductSample = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <motion.div
@@ -26,7 +29,14 @@ const ProductSample = () => {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <Button className={"btn-sample-1"}>SEE PRODUCT</Button>
+          <Button
+            className={"btn-sample-1"}
+            onClick={() => {
+              navigate("/product/zx9-speaker");
+            }}
+          >
+            SEE PRODUCT
+          </Button>
         </div>
       </motion.div>
       <motion.div
@@ -37,7 +47,14 @@ const ProductSample = () => {
         className={classes["sample-2"]}
       >
         <h3>ZX7 SPEAKER</h3>
-        <Button className={"btn-sample-2"}>SEE PRODUCT</Button>
+        <Button
+          className={"btn-sample-2"}
+          onClick={() => {
+            navigate("/product/zx7-speaker");
+          }}
+        >
+          SEE PRODUCT
+        </Button>
       </motion.div>
       <div className={classes["sample-3"]}>
         <div className={classes["sample-3-box-1"]}>
@@ -47,7 +64,14 @@ const ProductSample = () => {
           <h3>
             YX1 WIRELESS <br /> EARPHONES
           </h3>
-          <Button className={"btn-sample-2"}>SEE PRODUCT</Button>
+          <Button
+            className={"btn-sample-2"}
+            onClick={() => {
+              navigate("/product/yx1-earphones");
+            }}
+          >
+            SEE PRODUCT
+          </Button>
         </div>
       </div>
     </>

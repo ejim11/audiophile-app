@@ -11,6 +11,7 @@ const earPhoneListData = [
     imgTablet: { yx1Tab },
     imgMobile: { yx1Mob },
     alt: "ZX9 SPEAKER",
+    slug: "/product/yx1-earphones",
   },
 ];
 

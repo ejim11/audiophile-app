@@ -3,11 +3,11 @@
 form {
   width: 35%;
 
-  @include respond(tablet) {
+  @include respond(miniLaptop) {
     width: 50%;
   }
 
-  @include respond(midphone) {
+  @include respond(midTablet) {
     width: 80%;
   }
 }

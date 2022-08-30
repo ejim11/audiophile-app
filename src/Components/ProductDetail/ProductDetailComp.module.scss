@@ -1,0 +1,22 @@
+@import "../../scss/mixin";
+
+.product-detail {
+  width: 60%;
+  margin: 0 auto;
+
+  @include respond(bigLaptop) {
+    width: 70%;
+  }
+
+  @include respond(laptop) {
+    width: 80%;
+  }
+
+  //   @include respond(tablet) {
+  //     width: 80%;
+  //   }
+
+  @include respond(bigTablet) {
+    width: 90%;
+  }
+}

@@ -1,0 +1,56 @@
+@import "../../../scss/mixin";
+
+.gallery-box {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+
+  @include respond(midTablet) {
+    flex-direction: column;
+  }
+}
+
+.first-box {
+  margin-right: 2rem;
+
+  @include respond(laptop) {
+    margin-right: 3rem;
+  }
+
+  @include respond(midTablet) {
+    margin: 0 0 2rem;
+    display: flex;
+  }
+}
+
+.first-img {
+  margin-bottom: 2rem;
+
+  @include respond(laptop) {
+    margin-bottom: 3rem;
+  }
+
+  @include respond(midTablet) {
+    margin: 0 2rem 0 0;
+  }
+}
+
+.first-img,
+.second-img,
+.third-img {
+  border-radius: 1.3rem;
+  overflow: hidden;
+}
+
+.third-img {
+  display: flex;
+  align-items: center;
+
+  @include respond(midTablet) {
+    justify-content: center;
+  }
+
+  & img {
+    border-radius: 1.3rem;
+  }
+}

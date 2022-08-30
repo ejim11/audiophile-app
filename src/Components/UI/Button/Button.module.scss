@@ -19,7 +19,7 @@
     background-color: $color-white;
   }
 
-  @include respond(tablet) {
+  @include respond(miniLaptop) {
     align-self: center;
   }
 }
@@ -89,5 +89,44 @@
     color: $color-white;
     border-color: #ccc;
     cursor: not-allowed;
+  }
+}
+
+// back button
+.back-btn {
+  margin: 4rem 0;
+  background-color: $color-black;
+  color: $color-white;
+
+  &:hover {
+    color: $color-black;
+    background-color: transparent;
+  }
+}
+
+// add to cart btn
+.add-to-cart-btn {
+  margin-left: 2rem;
+  background-color: $color-primary;
+  color: $color-white;
+  border: 1px solid $color-primary;
+  outline: none;
+  align-self: stretch;
+
+  &:hover {
+    background-color: transparent;
+    color: $color-primary;
+  }
+}
+
+// see product btn
+.see-product-btn {
+  color: $color-white;
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+
+  &:hover {
+    background-color: transparent;
+    color: $color-primary;
   }
 }

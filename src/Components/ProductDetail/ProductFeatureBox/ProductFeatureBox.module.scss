@@ -1,0 +1,59 @@
+@import "../../../scss/base";
+@import "../../../scss/mixin";
+
+.feature-box {
+  margin: 10rem 0;
+  display: flex;
+
+  @include respond(midTablet) {
+    flex-direction: column;
+    margin: 5rem 0;
+  }
+
+  & h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  & p {
+    font-size: 1.6rem;
+  }
+
+  &-info {
+    width: 60%;
+
+    @include respond(tablet) {
+      width: 70%;
+    }
+
+    @include respond(midTablet) {
+      width: 100%;
+    }
+  }
+
+  &-features {
+    margin-left: 10rem;
+
+    @include respond(tablet) {
+      margin-left: 3rem;
+    }
+    @include respond(midTablet) {
+      margin: 3rem 0 0;
+    }
+
+    & ul {
+      list-style-type: none;
+    }
+  }
+}
+
+.features-list {
+  display: flex;
+  margin: 0 0 1rem;
+}
+
+.quantity {
+  color: $color-primary;
+  margin-right: 1.5rem;
+  font-weight: 700;
+}

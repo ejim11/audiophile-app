@@ -15,7 +15,7 @@ footer {
     padding: 0 10rem 5rem;
   }
 
-  @include respond(miniTablet) {
+  @include respond(bigTablet) {
     padding: 0 5rem 5rem;
   }
 
@@ -35,7 +35,7 @@ footer {
     width: 100%;
     margin: 4rem 0;
 
-    @include respond(midphone) {
+    @include respond(midTablet) {
       flex-direction: column-reverse;
       margin: 1rem 0;
     }
@@ -43,16 +43,17 @@ footer {
     & .nav-div {
       margin-left: auto;
 
-      @include respond(midphone) {
+      @include respond(midTablet) {
         margin: 1.5rem 0;
       }
-      @include respond(smallphone) {
+
+      @include respond(phone) {
         align-self: flex-start;
       }
     }
 
     & .logo-div {
-      @include respond(midphone) {
+      @include respond(midTablet) {
         align-self: center;
         margin: 2rem 0 0;
       }
@@ -63,7 +64,7 @@ footer {
     font-size: 1.6rem;
     margin: 1rem 0;
 
-    @include respond(midphone) {
+    @include respond(midTablet) {
       text-align: center;
     }
   }
@@ -73,7 +74,7 @@ footer {
   display: flex;
   margin: 1.5rem 0 3rem;
 
-  @include respond(midphone) {
+  @include respond(midTablet) {
     flex-direction: column;
   }
 }
@@ -82,7 +83,7 @@ footer {
   display: flex;
   width: 60%;
 
-  @include respond(midphone) {
+  @include respond(midTablet) {
     width: 100%;
     text-align: center;
   }
@@ -99,7 +100,7 @@ footer {
   justify-content: flex-end;
   margin-right: 1rem;
 
-  @include respond(midphone) {
+  @include respond(midTablet) {
     width: 100%;
     justify-content: center;
     margin: 4rem 1rem 1rem 0;
@@ -112,6 +113,6 @@ footer {
   & .icon {
     width: 2.2rem;
     height: 2.2rem;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
   }
 }

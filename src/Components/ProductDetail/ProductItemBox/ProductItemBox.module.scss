@@ -1,0 +1,84 @@
+@import "../../../scss/base";
+@import "../../../scss/mixin";
+
+.item-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-column-gap: 4rem;
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+
+    @include respond(tablet) {
+      padding: 0;
+    }
+
+    @include respond(midTablet) {
+      margin: 3rem 0 0;
+    }
+
+    & .new-product {
+      font-size: 1.5rem;
+      letter-spacing: 0.4rem;
+      color: $color-text-orange;
+
+      @include respond(midTablet) {
+        letter-spacing: 0.5rem;
+      }
+    }
+
+    & h2 {
+      font-size: 3.5rem;
+      margin: 1.5rem 0;
+      text-transform: uppercase;
+    }
+
+    & .description {
+      font-size: 1.6rem;
+    }
+
+    & .price {
+      font-size: 1.6rem;
+      margin: 1rem 0;
+      font-weight: 800;
+    }
+
+    & .add-to-cart-box {
+      display: flex;
+      align-items: center;
+      margin: 2rem 0;
+
+      & .amount-box {
+        display: flex;
+        background-color: rgb(241, 241, 241);
+        width: fit-content;
+
+        & button {
+          padding: 1rem 1.5rem;
+          font-size: 2rem;
+          font-weight: 500;
+          border: none;
+          outline: none;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $color-primary;
+            color: #fff;
+          }
+        }
+
+        & p {
+          width: 8rem;
+          text-align: center;
+          font-size: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

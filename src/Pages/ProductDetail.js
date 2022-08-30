@@ -1,5 +1,15 @@
+import ProductDetailComp from "../Components/ProductDetail/ProductDetailComp";
+import { useEffect } from "react";
+
 const Products = () => {
-  return <div>PRODUCTS</div>;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return (
+    <>
+      <ProductDetailComp />
+    </>
+  );
 };
 
 export default Products;

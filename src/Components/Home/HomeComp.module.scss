@@ -31,7 +31,7 @@
   height: 100%;
   margin: 0 auto;
 
-  @include respond(tablet) {
+  @include respond(miniLaptop) {
     width: 90%;
     align-items: center;
     text-align: center;
@@ -50,10 +50,10 @@
     font-size: 5rem;
     font-weight: 700;
 
-    @include respond(tablet) {
+    @include respond(miniLaptop) {
       width: 100%;
     }
-    @include respond(tinyphone) {
+    @include respond(smallPhone) {
       font-size: 3rem;
     }
   }
@@ -61,7 +61,7 @@
     width: 30%;
     margin-bottom: 3rem;
 
-    @include respond(tablet) {
+    @include respond(miniLaptop) {
       width: 70%;
       margin: 0 auto 3rem;
     }
@@ -81,10 +81,10 @@
   @include respond(laptop) {
     width: 75%;
   }
-  @include respond(tablet) {
+  @include respond(miniLaptop) {
     width: 80%;
   }
-  @include respond(miniTablet) {
+  @include respond(bigTablet) {
     width: 90%;
   }
 }

@@ -15,21 +15,21 @@
   color: #fff;
   overflow: hidden;
 
-  @include respond(midphone) {
+  @include respond(midTablet) {
     flex-direction: column;
   }
 
   &-box {
     &-1 {
       display: flex;
-      @include respond(midphone) {
+      @include respond(midTablet) {
         justify-content: center;
       }
     }
     &-2 {
       padding: 0 3rem;
 
-      @include respond(midphone) {
+      @include respond(midTablet) {
         text-align: center;
         margin: 2rem 0;
       }
@@ -37,7 +37,7 @@
         font-size: 5rem;
         font-weight: 700;
 
-        @include respond(midphone) {
+        @include respond(midTablet) {
           font-size: 4.5rem;
         }
       }
@@ -54,11 +54,11 @@
       margin-left: auto;
       margin-right: 5rem;
 
-      @include respond(phone) {
+      @include respond(tablet) {
         margin-bottom: -16rem;
       }
 
-      @include respond(midphone) {
+      @include respond(midTablet) {
         margin: 0rem;
         width: 40%;
       }
@@ -80,12 +80,12 @@
   align-items: flex-start;
   justify-content: center;
 
-  @include respond(tablet) {
+  @include respond(miniLaptop) {
     background-image: url("../../assets/home/tablet/image-speaker-zx7.jpg");
     background-position: 100% 100%;
   }
 
-  @include respond(phone) {
+  @include respond(tablet) {
     background-image: url("../../assets/home/mobile/image-speaker-zx7.jpg");
     background-position: 100% 100%;
     align-items: center;
@@ -103,7 +103,7 @@
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-column-gap: 3rem;
 
-  @include respond(tinyphone) {
+  @include respond(smallPhone) {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   }
 
@@ -122,15 +122,15 @@
     background-size: cover;
     background-position: 100% 100%;
 
-    @include respond(tablet) {
+    @include respond(miniLaptop) {
       background-image: url("../../assets/home/tablet/image-earphones-yx1.jpg");
     }
 
-    @include respond(phone) {
+    @include respond(tablet) {
       background-image: url("../../assets/home/mobile/image-earphones-yx1.jpg");
     }
 
-    @include respond(smallphone) {
+    @include respond(phone) {
       height: 25rem;
       margin-bottom: 5rem;
     }
@@ -144,7 +144,7 @@
     justify-content: center;
     align-items: flex-start;
 
-    @include respond(phone) {
+    @include respond(tablet) {
       align-items: center;
       text-align: center;
     }

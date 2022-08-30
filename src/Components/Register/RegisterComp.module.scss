@@ -8,7 +8,7 @@
   padding-top: 2rem;
   align-items: center;
 
-  @include respond(miniTablet) {
+  @include respond(bigTablet) {
     padding-top: 4rem;
   }
 
@@ -17,7 +17,7 @@
     font-weight: 700;
     margin: 0 0 1.5rem;
 
-    @include respond(miniTablet) {
+    @include respond(bigTablet) {
       margin: 0 0 3rem;
     }
   }

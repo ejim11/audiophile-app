@@ -1,4 +1,4 @@
-import ProductItemBox from "../UI/ProductItemsBox/ProductItemBox";
+import ProductItemComp from "../UI/ProductItemsComp/ProductItemComp";
 
 const getObjectPropValue = (obj) => {
   let img;
@@ -12,7 +12,7 @@ const getObjectPropValue = (obj) => {
 
 const structureData = (data) => {
   const dataComponentList = data.map((item, i) => (
-    <ProductItemBox
+    <ProductItemComp
       key={i}
       newProduct={item.newProduct}
       className={`${
@@ -22,6 +22,7 @@ const structureData = (data) => {
       text={item.text}
       img={getObjectPropValue(item.imgDesktop)}
       alt={item.alt}
+      slug = {item.slug}
     />
   ));
 
