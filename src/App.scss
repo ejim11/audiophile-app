@@ -16,9 +16,11 @@ html {
   @include respond(bigLaptop) {
     font-size: 87.5%; //1rem = 14px
   }
+
   @include respond(medLaptop) {
     font-size: 75%; //1rem = 12px
   }
+
   @include respond(laptop) {
     font-size: 62.5%; //1rem = 10px
   }
@@ -36,17 +38,19 @@ body {
 .App {
   position: relative;
 }
+
 img {
   max-width: 100%;
 }
 
 .swiper-pagination-bullet {
-  background-color: $color-white !important;
+  background-color: $color-white  !important;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: $color-primary !important;
+  background-color: $color-primary  !important;
 }
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -72,6 +76,7 @@ img {
   z-index: 5;
   width: 60%;
   margin: 0 auto 15rem;
+
   @include respond(bigLaptop) {
     width: 70%;
   }
@@ -79,9 +84,11 @@ img {
   @include respond(laptop) {
     width: 75%;
   }
+
   @include respond(miniLaptop) {
     width: 80%;
   }
+
   //   @include respond(miniTablet) {
   //     width: 90%;
   //   }
@@ -135,6 +142,7 @@ img {
     border-radius: 1rem;
   }
 }
+
 // shop-list styling
 .margin-ut {
   margin: calc(100vh - 83px) auto 0;
@@ -143,6 +151,7 @@ img {
 .margin-sa {
   margin: 3rem auto 0;
 }
+
 .shop-list-section {
   position: relative;
   z-index: 5;
@@ -256,6 +265,7 @@ img {
 
   & .product-img {
     order: 1;
+
     @include respond(midTablet) {
       order: 2;
     }
@@ -267,7 +277,7 @@ img {
   top: 0;
   background-color: $color-black;
   width: 100%;
-  height: 9.3rem;
+  height: 9.2rem;
 }
 
 input {

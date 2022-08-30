@@ -17,9 +17,13 @@ header {
     @include respond(miniLaptop) {
       width: 100%;
       padding: 2.5rem 4.5rem;
+
     }
+
     @include respond(tablet) {
       padding: 2.5rem 2rem;
+      background-color: $color-black;
+
     }
 
     @include respond(smallPhone) {
@@ -27,8 +31,10 @@ header {
     }
   }
 }
+
 .name {
   font-size: 1.5rem;
+
   @include respond(bigTablet) {
     margin-left: auto;
   }
@@ -52,6 +58,7 @@ header {
     margin-left: 1.5rem;
   }
 }
+
 .icon-menu-bar {
   height: 2.2rem;
   width: 2.2rem;
