@@ -22,7 +22,7 @@ const ProductDetailComp = () => {
 
   return (
     <section>
-      <div className={"header-l-bg-div"}></div>
+      {/* <div className={"header-l-bg-div"}></div> */}
       <div className={classes["product-detail"]}>
         <Button
           className={"back-btn"}
