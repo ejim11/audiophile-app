@@ -10,7 +10,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 2rem 0;
+        margin: 1.5rem 0;
         font-size: 1.6rem;
 
         & .icon {
@@ -66,6 +66,10 @@
 
         @include respond(midTablet) {
             height: 65vh;
+        }
+
+        @include respond(phone) {
+            height: 55vh;
         }
 
         @include orient(phone) {
