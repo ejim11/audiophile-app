@@ -7,13 +7,17 @@ import { CgShoppingCart } from "react-icons/cg";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
+import { cartActions } from "../../store/cart-slice";
 
 const Header = () => {
+  const dispatchFn = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
   const authCtxLoginState = useSelector((state) => state.auth.isLoggedIn);
+  const cartState = useSelector((state) => state.cart.cart);
+  console.log(cartState);
 
   const [menuVisible, setMenuVisible] = useState(false);
 
@@ -30,6 +34,10 @@ const Header = () => {
 
   const checkLocation = location.pathname === "/login";
   const checkHome = location.pathname === "/";
+
+  const openCarthandler = () => {
+    dispatchFn(cartActions.openCart());
+  };
 
   return (
     <header
@@ -70,7 +78,10 @@ const Header = () => {
               Register
             </Button>
           )}
-          <CgShoppingCart className={classes.icon} />
+          <div className={classes["cart-box"]} onClick={openCarthandler}>
+            <CgShoppingCart className={classes.icon} />
+            {cartState.length > 0 && <span>{cartState.length}</span>}
+          </div>
         </div>
       </div>
     </header>

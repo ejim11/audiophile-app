@@ -55,8 +55,8 @@ header {
   }
 
   & .icon {
-    height: 2.2rem;
-    width: 2.2rem;
+    height: 2.8rem;
+    width: 2.8rem;
     margin-left: 1.5rem;
   }
 }
@@ -99,6 +99,7 @@ header {
   @include respond(bigTablet) {
     transform: translateX(-100%);
     opacity: 0;
+
   }
 }
 
@@ -108,5 +109,25 @@ header {
 
 .bg-black {
   background-color: $color-black;
+}
 
+.cart-box {
+  position: relative;
+  margin-right: 1rem;
+  cursor: pointer;
+
+  & span {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: $color-primary;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    top: -.5rem;
+    right: -1.5rem;
+  }
 }

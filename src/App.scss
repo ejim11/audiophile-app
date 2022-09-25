@@ -12,6 +12,7 @@
 html {
   box-sizing: border-box;
   font-size: 100%; //1rem = 16px
+  overflow-x: hidden;
 
   @include respond(bigLaptop) {
     font-size: 87.5%; //1rem = 14px
@@ -33,6 +34,7 @@ html {
 body {
   font-family: $font-display;
   background-color: rgb(250, 250, 250);
+  overflow-x: hidden;
 }
 
 .App {

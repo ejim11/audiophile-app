@@ -45,6 +45,7 @@
     background-color: $color-black;
   }
 }
+
 .btn-sample-4 {
   color: $color-white;
   background-color: $color-primary;
@@ -121,6 +122,19 @@
 
 // see product btn
 .see-product-btn {
+  color: $color-white;
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+
+  &:hover {
+    background-color: transparent;
+    color: $color-primary;
+  }
+}
+
+// checkout-btn 
+.checkout-btn {
+  width: 100%;
   color: $color-white;
   background-color: $color-primary;
   border: 1px solid $color-primary;

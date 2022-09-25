@@ -1,6 +1,43 @@
-main {
-  //   background-color: rgba(241, 241, 241);
-  background-color: rgb(250, 250, 250);
+@import "../../scss/base";
+@import "../../scss/mixin";
 
-  // background-color: red;
+main {
+  background-color: rgb(250, 250, 250);
+  overflow-x: hidden;
+
+  & .cart-box {
+    width: 40rem;
+    height: 40rem;
+    position: absolute;
+    background-color: $color-white;
+    box-shadow: .1rem .1rem 1rem .2rem rgba($color-black, .1);
+    top: 10rem;
+    right: 2rem;
+    z-index: 12;
+    transition: all .3s ease-in;
+
+    @include respond(midTablet) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 110vh;
+    }
+
+  }
+}
+
+.open-cart {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  // display: block;
+}
+
+.close-cart {
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  // display: none;
+
 }

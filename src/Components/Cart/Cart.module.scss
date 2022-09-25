@@ -1,0 +1,147 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+
+.cart-container {
+    padding: 1rem 2rem;
+
+
+
+    & .exit-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 2rem 0;
+        font-size: 1.6rem;
+
+        & .icon {
+            cursor: pointer;
+        }
+
+        & .empty-cart-btn {
+            text-decoration: underline;
+            color: $color-primary;
+            cursor: pointer;
+        }
+    }
+
+    & .empty-cart-img {
+        @include respond(midTablet) {
+            margin: 12rem 0 0;
+        }
+
+        @include respond(phone) {
+            margin: 16rem 0 0;
+        }
+
+        @include orient(phone) {
+            margin: 0;
+        }
+
+    }
+
+    & .cart-list-box {
+        width: 100%;
+        height: 23rem;
+        overflow-y: auto;
+        padding-right: .5rem;
+
+        &::-webkit-scrollbar {
+            width: 2px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: $color-white;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: rgba($color-dark, .5);
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        @include respond(midTablet) {
+            height: 65vh;
+        }
+
+        @include orient(phone) {
+            height: 45vh;
+        }
+    }
+
+    & .cart-item {
+        display: flex;
+        align-items: center;
+        margin: 0 0 1rem;
+
+        &-img {
+            width: 6rem;
+            height: 6rem;
+        }
+
+        &-name {
+            padding: 0 1rem;
+
+            & p:first-child {
+                font-weight: 700;
+                font-size: 1.5rem;
+            }
+
+            & p:last-child {
+                color: rgb(151, 151, 151);
+                margin-top: .5rem;
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+        }
+
+        & .qty-box {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            font-size: $text-font;
+            background-color: rgb(241, 241, 241);
+
+
+
+            & p:first-child,
+            p:last-child {
+                padding: 1rem;
+                cursor: pointer;
+            }
+
+            & .qty {
+                padding: 0 1rem;
+            }
+        }
+    }
+
+    & .round-up-box {
+        width: 100%;
+        display: block;
+        margin-top: 2rem;
+
+        & .total-box {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+
+            & p:first-child {
+                font-size: $text-font;
+            }
+
+            & p:last-child {
+                font-weight: 700;
+                font-size: $text-font;
+            }
+        }
+
+
+    }
+}

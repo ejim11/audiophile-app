@@ -2,8 +2,11 @@ import Button from "../../UI/Button/Button";
 import classes from "./ProductItemBox.module.scss";
 import modifyNum from "../../Helper fns/modifyAmount";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../../store/cart-slice";
 
 const ProductItemBox = ({ product }) => {
+  const dispatchFn = useDispatch();
   const [inputValue, setInputValue] = useState(0);
 
   const increaseInputHandler = () => {
@@ -17,8 +20,22 @@ const ProductItemBox = ({ product }) => {
   };
 
   const submitAmount = () => {
-    console.log(inputValue);
-    console.log(product);
+    if (inputValue === 0) {
+      return;
+    }
+
+    dispatchFn(
+      cartActions.addItemToCart({
+        id: product.id,
+        name: product.name,
+        image: product.image.mobile,
+        quantity: inputValue,
+        price: product.price,
+        totalAmount: inputValue * product.price,
+      })
+    );
+
+    setInputValue(0);
   };
 
   return (
