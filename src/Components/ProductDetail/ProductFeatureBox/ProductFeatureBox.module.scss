@@ -16,7 +16,7 @@
   }
 
   & p {
-    font-size: 1.6rem;
+    font-size: $text-font;
   }
 
   &-info {
@@ -37,6 +37,7 @@
     @include respond(tablet) {
       margin-left: 3rem;
     }
+
     @include respond(midTablet) {
       margin: 3rem 0 0;
     }

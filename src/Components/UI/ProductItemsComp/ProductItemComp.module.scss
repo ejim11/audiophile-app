@@ -20,7 +20,7 @@
 
   & p:not(.new-product) {
     margin: 1.5rem 0 3rem;
-    font-size: 1.6rem;
+    font-size: $text-font;
   }
 
   & p.new-product {

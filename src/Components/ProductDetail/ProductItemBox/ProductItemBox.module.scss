@@ -37,11 +37,11 @@
     }
 
     & .description {
-      font-size: 1.6rem;
+      font-size: $text-font;
     }
 
     & .price {
-      font-size: 1.6rem;
+      font-size: $text-font;
       margin: 1rem 0;
       font-weight: 800;
     }
