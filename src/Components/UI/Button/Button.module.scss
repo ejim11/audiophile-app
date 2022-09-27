@@ -98,6 +98,7 @@
   margin: 4rem 0;
   background-color: $color-black;
   color: $color-white;
+  border: 1px solid $color-black;
 
   &:hover {
     color: $color-black;
@@ -147,3 +148,19 @@
     color: $color-primary;
   }
 }
+
+// // checkout submit button
+// .checkout-submit-btn{
+//   font-size: 1.6rem;
+//     font-weight: 700;
+//     width: 100%;
+//     color: $color-white;
+//     background-color: $color-primary;
+//     border: 1px solid $color-primary;
+
+
+//     &:hover {
+//       background-color: transparent;
+//       color: $color-primary;
+//     }
+// }

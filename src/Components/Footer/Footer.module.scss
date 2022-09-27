@@ -12,12 +12,18 @@ footer {
   position: relative;
 
   @include respond(laptop) {
-    padding: 0 10rem 5rem;
+    padding: 0 14rem 5rem;
+  }
+
+  @include respond(miniLaptop) {
+    padding: 0 6rem 5rem;
   }
 
   @include respond(bigTablet) {
     padding: 0 5rem 5rem;
   }
+
+
 
   & .first-div {
     width: 100%;

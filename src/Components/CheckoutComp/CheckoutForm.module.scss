@@ -1,0 +1,147 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+
+.checkout-form {
+    width: 100%;
+
+    & .details-div {
+        width: 100%;
+
+        & .delivery-box {
+            display: flex;
+            align-items: center;
+
+            @include respond(midTablet) {
+                flex-direction: column;
+            }
+
+
+
+            &-img {
+                margin-right: 1.5rem;
+
+                @include respond(midTablet) {
+                    margin-right: 0;
+                    margin-bottom: 1.5rem;
+                }
+
+                & img {
+                    width: 100%;
+                    width: 12rem;
+                    height: 12rem;
+                }
+            }
+
+            &-text {
+                font-size: $text-font;
+
+                @include respond(midTablet) {
+                    text-align: center;
+                }
+            }
+        }
+
+
+
+        & h3 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: $color-primary;
+            margin: 1rem 0;
+        }
+
+        & .flex-div {
+            display: flex;
+            width: 100%;
+
+            @include respond(midTablet) {
+                flex-direction: column;
+            }
+        }
+
+        & .grid-div {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 2rem;
+
+            @include respond(midTablet) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        & .payment-div {
+            margin: 1.5rem 0 3rem;
+            font-size: 1.6rem;
+
+            & p {
+                font-weight: 700;
+
+                @include respond(midTablet) {
+                    margin: 0 0 1.5rem;
+                }
+            }
+
+            & .payment-choice {
+                display: flex;
+                flex-direction: column;
+
+                & label {
+                    width: 100%;
+                    padding: 1rem 2rem;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    border-radius: .5rem;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+
+                    & input {
+                        opacity: 0;
+                        cursor: pointer;
+                    }
+
+
+                    & .checkmark {
+                        height: 2.5rem;
+                        width: 2.5rem;
+                        border-radius: 50%;
+                        margin-right: 1rem;
+                        position: relative;
+                        order: -1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid $color-dark;
+
+
+                        & .inner-checkmark {
+                            width: 1.25rem;
+                            height: 1.25rem;
+                            border-radius: 50%;
+                            background-color: $color-white;
+                        }
+                    }
+
+                    & input:checked~.checkmark {
+                        background-color: $color-primary;
+                        border: 1px solid $color-primary;
+                    }
+                }
+
+                & label:first-child {
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+.label-active {
+    border: 1px solid $color-primary;
+}
+
+.label-inactive {
+    border: 1px solid $color-dark;
+}

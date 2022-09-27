@@ -1,0 +1,59 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+
+.checkout-section {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 8rem;
+
+    @include respond(miniLaptop) {
+        width: 90%;
+    }
+
+    & .checkout-box {
+        display: flex;
+
+        @include respond(bigTablet) {
+            flex-direction: column;
+        }
+
+        &-1 {
+            width: 65%;
+            margin-right: 5rem;
+            background-color: $color-white;
+            padding: 4rem;
+
+            @include respond(bigTablet) {
+                width: 100%;
+            }
+
+            @include respond(midTablet) {
+                padding: 4rem 2rem;
+            }
+
+            & h2 {
+                font-weight: 700;
+                font-size: 2.5rem;
+                margin-bottom: 2.5rem;
+            }
+
+            & .login-choice {
+                padding: 0.75rem;
+                border: 1px solid $color-black;
+                border-radius: 0.5rem;
+                margin-bottom: 2.5rem;
+
+                & p {
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                }
+
+                & p:not(:last-child) {
+                    margin: 1rem 0;
+                }
+            }
+        }
+
+
+    }
+}

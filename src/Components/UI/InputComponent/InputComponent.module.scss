@@ -1,0 +1,49 @@
+@import "../../../scss/base";
+@import "../../../scss/mixin";
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 2rem;
+
+    & label {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: $color-black;
+    }
+
+    & input {
+        padding: 1rem 2rem;
+        outline: none;
+        border-radius: .5rem;
+
+        &::placeholder {
+            color: $color-dark;
+        }
+    }
+}
+
+.first-box {
+    margin-right: 2rem;
+
+    @include respond(midTablet) {
+        margin-right: 0;
+    }
+}
+
+.error-input {
+    border: 1px solid $color-primary;
+}
+
+.normal-input {
+    border: 1px solid $color-dark;
+
+}
+
+.error-text {
+    color: $color-primary;
+    font-size: 1.2rem;
+    margin-top: .5rem;
+}

@@ -1,0 +1,104 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+
+.summary-container {
+    width: 35%;
+    background-color: $color-white;
+    padding: 3rem;
+    align-self: flex-start;
+
+    @include respond(bigTablet) {
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    & h3 {
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    & .cart-list {
+        max-height: 20rem;
+        overflow-y: auto;
+        margin-bottom: 3rem;
+
+        &::-webkit-scrollbar {
+            width: 2px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: $color-white;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: rgba($color-dark, .5);
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    }
+
+    & .summary-prices {
+        display: flex;
+        margin: 1rem 0;
+        font-size: $text-font;
+
+        & p:first-child {
+            color: $color-dark;
+            font-weight: 100;
+        }
+
+        & p:last-child {
+            color: $color-black;
+            font-weight: 700;
+            margin-left: auto;
+        }
+    }
+
+    & .grand-price {
+        margin-bottom: 3rem;
+
+        & p:last-child {
+            color: $color-primary;
+        }
+    }
+
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    &-img {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    &-name {
+        padding: 0 1rem;
+
+        & p:first-child {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        & p:last-child {
+            color: rgb(151, 151, 151);
+            margin-top: .5rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+    }
+
+    &-qty {
+        margin-left: auto;
+        margin-right: .5rem;
+        font-size: 1.5rem;
+    }
+}

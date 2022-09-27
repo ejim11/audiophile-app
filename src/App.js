@@ -11,6 +11,7 @@ import Speakers from "./Pages/Speakers";
 import ProductDetail from "./Pages/ProductDetail";
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 import { useSelector } from "react-redux";
+import Checkout from "./Pages/Checkout";
 
 function App() {
   const tawkMessengerRef = useRef();
@@ -29,6 +30,7 @@ function App() {
           <Route path="/category/earphones" element={<EarPhones />} />
           <Route path="/category/speakers" element={<Speakers />} />
           <Route path="/product/:productId" element={<ProductDetail />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </Layout>
       <TawkMessengerReact
