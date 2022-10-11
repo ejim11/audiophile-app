@@ -7,11 +7,18 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
+import { FaEyeSlash } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 
 const RegisterForm = () => {
   const navigate = useNavigate();
   const dispatchFn = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
+  const [passwordIsVisible, setPasswordIsVisible] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setPasswordIsVisible((prevState) => !prevState);
+  };
 
   const {
     value: enteredEmail,
@@ -81,6 +88,15 @@ const RegisterForm = () => {
         afterAuth
       )
     );
+
+    localStorage.setItem(
+      "userDetail",
+      JSON.stringify({
+        name: enteredName,
+        email: enteredEmail,
+        number: enteredNumber,
+      })
+    );
   };
 
   let formIsValid = false;
@@ -117,6 +133,7 @@ const RegisterForm = () => {
         <input
           type="text"
           id="name"
+          placeholder="Alex Freeman"
           value={enteredName}
           onChange={nameInputChangeHandler}
           onBlur={nameInputBlurHandler}
@@ -130,6 +147,7 @@ const RegisterForm = () => {
         <input
           type="email"
           id="email"
+          placeholder="alexfreeman@gmail.com"
           value={enteredEmail}
           onChange={emailInputChangeHandler}
           onBlur={emailInputBlurHandler}
@@ -143,6 +161,7 @@ const RegisterForm = () => {
         <input
           type="text"
           id="phone-number"
+          placeholder="+23481-4562-7893"
           value={enteredNumber}
           onChange={numberInputChangeHandler}
           onBlur={numberInputBlurHandler}
@@ -153,13 +172,28 @@ const RegisterForm = () => {
       </div>
       <div className={passwordInputClasses}>
         <label htmlFor="name">Password</label>
-        <input
-          type="password"
-          id="password"
-          value={enteredPassword}
-          onChange={passwordInputChangeHandler}
-          onBlur={passwordInputBlurHandler}
-        />
+        <div className={classes["password-box"]}>
+          <input
+            type={passwordIsVisible ? "text" : "password"}
+            id="password"
+            placeholder="*********"
+            value={enteredPassword}
+            onChange={passwordInputChangeHandler}
+            onBlur={passwordInputBlurHandler}
+          />
+          {passwordIsVisible ? (
+            <FaEyeSlash
+              className={classes.icon}
+              onClick={togglePasswordVisibility}
+            />
+          ) : (
+            <FaEye
+              className={classes["icon"]}
+              onClick={togglePasswordVisibility}
+            />
+          )}
+        </div>
+
         {enteredPasswordIsInValid && (
           <p className={"error-text"}>Enter a valid password!</p>
         )}

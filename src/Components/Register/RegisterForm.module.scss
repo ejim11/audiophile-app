@@ -1,4 +1,5 @@
 @import "../../scss/mixin";
+@import "../../scss/base";
 
 form {
   width: 35%;
@@ -10,4 +11,27 @@ form {
   @include respond(midTablet) {
     width: 80%;
   }
+}
+
+input::placeholder {
+  font-size: 700;
+  color: rgba($color-dark, .5);
+}
+
+.password-box {
+  position: relative;
+
+  & input {
+    position: relative;
+    width: 100%;
+  }
+}
+
+.icon {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
 }

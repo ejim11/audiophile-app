@@ -53,10 +53,12 @@
     @include respond(miniLaptop) {
       width: 100%;
     }
+
     @include respond(smallPhone) {
       font-size: 3rem;
     }
   }
+
   & .description {
     width: 30%;
     margin-bottom: 3rem;
@@ -81,9 +83,11 @@
   @include respond(laptop) {
     width: 75%;
   }
+
   @include respond(miniLaptop) {
     width: 80%;
   }
+
   @include respond(bigTablet) {
     width: 90%;
   }
@@ -103,6 +107,7 @@
     background-image: url("../../assets/home/mobile/image-header.jpg");
   }
 }
+
 .slide-2 {
   background-image: url("../../assets/home/desktop/pexels-daniel-reche-3721941\ \(3\).jpg");
   background-position: center;
@@ -117,6 +122,7 @@
     background-image: url("../../assets/home/mobile/pexels-daniel-reche-3721941.jpg");
   }
 }
+
 .slide-3 {
   background-image: url("../../assets/home/desktop/headphones-3916271.jpg");
   background-position: center;

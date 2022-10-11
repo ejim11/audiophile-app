@@ -10,10 +10,10 @@ const ProductSample = () => {
   return (
     <>
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
+        // initial={{ opacity: 0 }}
+        // whileInView={{ opacity: 1 }}
+        // transition={{ duration: 1 }}
+        // viewport={{ once: true }}
         className={classes["sample-1"]}
       >
         <div className={` ${classes["sample-1-box-1"]}`}>
@@ -40,10 +40,10 @@ const ProductSample = () => {
         </div>
       </motion.div>
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
+        // initial={{ opacity: 0 }}
+        // whileInView={{ opacity: 1 }}
+        // transition={{ duration: 1 }}
+        // viewport={{ once: true }}
         className={classes["sample-2"]}
       >
         <h3>ZX7 SPEAKER</h3>

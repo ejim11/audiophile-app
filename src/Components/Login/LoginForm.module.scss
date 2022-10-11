@@ -12,3 +12,39 @@ form {
     width: 80%;
   }
 }
+
+.success-message {
+  color: $color-primary;
+
+  @include respond(phone) {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+.error-message {
+  color: red;
+
+  @include respond(phone) {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+.password-box {
+  position: relative;
+
+  & input {
+    position: relative;
+    width: 100%;
+  }
+}
+
+.icon {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}

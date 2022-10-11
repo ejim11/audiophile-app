@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import classes from "./Layout.module.scss";
 import { useSelector, useDispatch } from "react-redux";
-import { authActions } from "../../store/auth-slice";
 import { userLogout } from "../../store/auth-actions";
 
 const Layout = (props) => {
@@ -15,7 +14,6 @@ const Layout = (props) => {
   const logoutBoxVisibleState = useSelector(
     (state) => state.auth.logoutBoxIsVisible
   );
-  console.log(logoutBoxVisibleState);
 
   return (
     <>

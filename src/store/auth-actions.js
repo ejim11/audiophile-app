@@ -1,6 +1,7 @@
 import { authActions } from "./auth-slice";
 import calculateExpirationTime from "../Components/Helper fns/calcuateExpirationTime";
 import authRequest from "../Components/Helper fns/authRequest";
+
 let logoutTimer;
 
 export const userRegister = (data, afterAuth) => {
@@ -83,7 +84,6 @@ export const userLogout = (data) => {
 
 export const autoLogout = (tokenDuration) => {
   return (dispatch) => {
-    console.log(tokenDuration);
     logoutTimer = setTimeout(() => {
       dispatch(authActions.logoutHandler());
     }, tokenDuration);

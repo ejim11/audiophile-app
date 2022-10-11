@@ -1,6 +1,13 @@
 @import "./scss/base";
 @import "./scss/mixin";
 
+:root {
+  --toastify-icon-color-success: rgb(216, 125, 74) !important;
+  --toastify-color-progress-success: rgb(216, 125, 74) !important;
+  --toastify-icon-color-error: red !important;
+  --toastify-color-progress-error: red !important;
+}
+
 *,
 *::before,
 *::after {

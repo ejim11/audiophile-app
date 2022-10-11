@@ -46,7 +46,7 @@ function App() {
         widgetId="1gadd5hjd"
         ref={tawkMessengerRef}
       />
-      <ToastContainer autoClose={3000} style={{ fontSize: "1.7rem" }} />
+      <ToastContainer autoClose={2000} style={{ fontSize: "1.7rem" }} />
     </div>
   );
 }

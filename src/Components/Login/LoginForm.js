@@ -7,11 +7,18 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FaEyeSlash } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 
 const LoginForm = () => {
   const navigate = useNavigate();
   const dispatchFn = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
+  const [passwordIsVisible, setPasswordIsVisible] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setPasswordIsVisible((prevState) => !prevState);
+  };
 
   const {
     value: enteredEmail,
@@ -38,14 +45,16 @@ const LoginForm = () => {
       setIsLoading(false);
       if (state === "success") {
         toast.success(msg, {
-          className: `${classes["toast-message"]}`,
+          className: `${classes["success-message"]}`,
         });
         setTimeout(() => {
           navigate("/", { replace: true });
         }, 800);
       }
       if (state === "error") {
-        toast.error(msg);
+        toast.error(msg, {
+          className: `${classes["error-message"]}`,
+        });
       }
 
       emailInputReset();
@@ -84,6 +93,7 @@ const LoginForm = () => {
         <input
           type="email"
           id="email"
+          placeholder="alexfreeman@gmail.com"
           value={enteredEmail}
           onChange={emailInputChangeHandler}
           onBlur={emailInputBlurHandler}
@@ -94,19 +104,33 @@ const LoginForm = () => {
       </div>
       <div className={passwordInputClasses}>
         <label htmlFor="name">Password</label>
-        <input
-          type="password"
-          id="password"
-          value={enteredPassword}
-          onChange={passwordInputChangeHandler}
-          onBlur={passwordInputBlurHandler}
-        />
+        <div className={classes["password-box"]}>
+          <input
+            type={passwordIsVisible ? "text" : "password"}
+            id="password"
+            placeholder="*********"
+            value={enteredPassword}
+            onChange={passwordInputChangeHandler}
+            onBlur={passwordInputBlurHandler}
+          />
+          {passwordIsVisible ? (
+            <FaEyeSlash
+              className={classes.icon}
+              onClick={togglePasswordVisibility}
+            />
+          ) : (
+            <FaEye
+              className={classes["icon"]}
+              onClick={togglePasswordVisibility}
+            />
+          )}
+        </div>
         {enteredPasswordIsInValid && (
           <p className={"error-text"}>Enter a valid password!</p>
         )}
       </div>
       <Button className={"login-form-btn"} disabled={!formIsValid}>
-        {isLoading ? "loading..." : "LOGIN"}
+        {isLoading ? "logging in..." : "LOGIN"}
       </Button>
     </form>
   );

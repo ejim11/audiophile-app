@@ -68,9 +68,9 @@
             height: 65vh;
         }
 
-        @include respond(phone) {
-            height: 60vh;
-        }
+        // @include respond(phone) {
+        //     height: 70vh;
+        // }
 
         @include orient(phone) {
             height: 45vh;

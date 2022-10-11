@@ -18,7 +18,6 @@ const Header = () => {
   const navigate = useNavigate();
   const authCtxLoginState = useSelector((state) => state.auth.isLoggedIn);
   const cartState = useSelector((state) => state.cart.cart);
-  console.log(authCtxLoginState);
 
   const [menuVisible, setMenuVisible] = useState(false);
 
