@@ -41,3 +41,17 @@ main {
   // display: none;
 
 }
+
+.logout-btn {
+  position: absolute;
+  top: 10rem;
+  right: 2rem;
+  z-index: 12;
+  font-size: 1.6rem;
+  color: $color-black;
+  background-color: $color-white;
+  padding: 1rem 2rem;
+  box-shadow: .1rem .1rem 1rem .2rem rgba($color-black, .1);
+  transition: all .3s ease-in;
+  cursor: pointer;
+}

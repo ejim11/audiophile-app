@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom";
 import CheckoutForm from "./CheckoutForm";
 import Summary from "../Summary/Summary";
 import classes from "./CheckoutComp.module.scss";
+import { useSelector } from "react-redux";
 
 const CheckoutComp = () => {
+  const authCtxLoginState = useSelector((state) => state.auth.isLoggedIn);
   const navigate = useNavigate();
 
   return (
@@ -20,11 +22,20 @@ const CheckoutComp = () => {
       <div className={classes["checkout-box"]}>
         <div className={classes["checkout-box-1"]}>
           <h2>CHECKOUT</h2>
-          <div className={classes["login-choice"]}>
-            <Button className={"btn-sample-2"}>LOGIN</Button>
-            <p>OR</p>
-            <p>CONTINUE AS GUEST:</p>
-          </div>
+          {!authCtxLoginState && (
+            <div className={classes["login-choice"]}>
+              <Button
+                className={"btn-sample-2"}
+                onClick={() => {
+                  navigate("/login", { replace: true });
+                }}
+              >
+                LOGIN
+              </Button>
+              <p>OR</p>
+              <p>CONTINUE AS GUEST:</p>
+            </div>
+          )}
           <CheckoutForm />
         </div>
         <>

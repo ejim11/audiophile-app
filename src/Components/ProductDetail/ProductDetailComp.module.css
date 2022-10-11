@@ -1,0 +1,23 @@
+.product-detail {
+  width: 60%;
+  margin: 0 auto;
+}
+
+@media (max-width: 140.625em) {
+  .product-detail {
+    width: 70%;
+  }
+}
+
+@media (max-width: 90em) {
+  .product-detail {
+    width: 80%;
+  }
+}
+
+@media (max-width: 59.375em) {
+  .product-detail {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=ProductDetailComp.module.css.map */

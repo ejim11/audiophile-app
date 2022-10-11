@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,IAAI,CAAC;EACH,KAAK,EAAE,GAAG;CASX;;ACyBG,MAAM,EAAE,SAAS,EAAE,OAAO;EDnC9B,AAAA,IAAI,CAAC;IAID,KAAK,EAAE,GAAG;GAMb;;;ACIG,MAAM,EAAE,SAAS,EAAE,QAAQ;EDd/B,AAAA,IAAI,CAAC;IAQD,KAAK,EAAE,GAAG;GAEb",
+    "sources": [
+        "RegisterForm.module.scss",
+        "../../scss/_mixin.scss"
+    ],
+    "names": [],
+    "file": "RegisterForm.module.css"
+}

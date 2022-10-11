@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { cartActions } from "../../store/cart-slice";
+import { authActions } from "../../store/auth-slice";
 
 const Header = () => {
   const dispatchFn = useDispatch();
@@ -17,7 +18,7 @@ const Header = () => {
   const navigate = useNavigate();
   const authCtxLoginState = useSelector((state) => state.auth.isLoggedIn);
   const cartState = useSelector((state) => state.cart.cart);
-  console.log(cartState);
+  console.log(authCtxLoginState);
 
   const [menuVisible, setMenuVisible] = useState(false);
 
@@ -67,7 +68,15 @@ const Header = () => {
         {authCtxLoginState && <div className={classes.name}>Ejim</div>}
 
         <div className={classes["icon-div"]}>
-          {authCtxLoginState && <CgProfile className={classes.icon} />}
+          {authCtxLoginState && (
+            <CgProfile
+              className={classes.icon}
+              onClick={() => {
+                console.log("logout");
+                dispatchFn(authActions.toggleLogoutBox());
+              }}
+            />
+          )}
           {!checkLocation && !authCtxLoginState && (
             <Button className="login-btn" onClick={navigateToLogin}>
               Login

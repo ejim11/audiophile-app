@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,eAAe,CAAC;EACd,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,MAAM;CAiBf;;ACqCG,MAAM,EAAE,SAAS,EAAE,SAAS;EDxDhC,AAAA,eAAe,CAAC;IAKZ,KAAK,EAAE,GAAG;GAcb;;;ACuBG,MAAM,EAAE,SAAS,EAAE,IAAI;ED1C3B,AAAA,eAAe,CAAC;IASZ,KAAK,EAAE,GAAG;GAUb;;;ACSG,MAAM,EAAE,SAAS,EAAE,QAAQ;ED5B/B,AAAA,eAAe,CAAC;IAiBZ,KAAK,EAAE,GAAG;GAEb",
+    "sources": [
+        "ProductDetailComp.module.scss",
+        "../../scss/_mixin.scss"
+    ],
+    "names": [],
+    "file": "ProductDetailComp.module.css"
+}

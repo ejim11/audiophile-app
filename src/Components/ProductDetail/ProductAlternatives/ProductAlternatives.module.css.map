@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,gBAAgB,CAAC;EACf,MAAM,EAAE,OAAO;CAMhB;;AAPD,AAGE,gBAHc,CAGZ,EAAE,CAAC;EACH,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,MAAM;CACnB;;AAGH,AAAA,aAAa,CAAC;EACZ,OAAO,EAAE,IAAI;EACb,MAAM,EAAE,MAAM;EACd,qBAAqB,EAAE,oCAAoC;EAC3D,eAAe,EAAE,IAAI;CACtB;;AAED,AAAA,iBAAiB,CAAC;EAChB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;CAKpB;;AEXG,MAAM,EAAE,SAAS,EAAE,QAAQ;EFG/B,AAAA,iBAAiB,CAAC;IAMd,MAAM,EAAE,MAAM;GAEjB;;;AAED,AAAA,aAAa,CAAC;EACZ,SAAS,EAAE,IAAI;EACf,KAAK,EC1BO,OAAO;ED2BnB,WAAW,EAAE,GAAG;EAChB,MAAM,EAAE,MAAM;CACf",
+    "sources": [
+        "ProductAlternatives.module.scss",
+        "../../../scss/_base.scss",
+        "../../../scss/_mixin.scss"
+    ],
+    "names": [],
+    "file": "ProductAlternatives.module.css"
+}

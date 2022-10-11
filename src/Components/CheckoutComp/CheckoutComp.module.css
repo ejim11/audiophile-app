@@ -1,0 +1,68 @@
+.checkout-section {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 8rem;
+}
+
+@media (max-width: 68.75em) {
+  .checkout-section {
+    width: 90%;
+  }
+}
+
+.checkout-section .checkout-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 59.375em) {
+  .checkout-section .checkout-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.checkout-section .checkout-box-1 {
+  width: 65%;
+  margin-right: 5rem;
+  background-color: #fff;
+  padding: 4rem;
+}
+
+@media (max-width: 59.375em) {
+  .checkout-section .checkout-box-1 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 46.875em) {
+  .checkout-section .checkout-box-1 {
+    padding: 4rem 2rem;
+  }
+}
+
+.checkout-section .checkout-box-1 h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.checkout-section .checkout-box-1 .login-choice {
+  padding: 0.75rem;
+  border: 1px solid #000000;
+  border-radius: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.checkout-section .checkout-box-1 .login-choice p {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.checkout-section .checkout-box-1 .login-choice p:not(:last-child) {
+  margin: 1rem 0;
+}
+/*# sourceMappingURL=CheckoutComp.module.css.map */

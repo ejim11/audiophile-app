@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACX,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,SAAS;EACjB,WAAW,EAAE,KAAK;CACnB",
+    "sources": [
+        "SpeakersList.module.scss"
+    ],
+    "names": [],
+    "file": "SpeakersList.module.css"
+}

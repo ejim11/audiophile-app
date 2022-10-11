@@ -1,5 +1,5 @@
 import "./App.scss";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layout/Layout";
 import Login from "./Pages/Login";
@@ -10,12 +10,20 @@ import EarPhones from "./Pages/EarPhones";
 import Speakers from "./Pages/Speakers";
 import ProductDetail from "./Pages/ProductDetail";
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Checkout from "./Pages/Checkout";
+import { ToastContainer } from "react-toastify";
+import { autoLogout } from "./store/auth-actions";
 
 function App() {
+  const dispatchFn = useDispatch();
   const tawkMessengerRef = useRef();
   const authCtxLoginState = useSelector((state) => state.auth.isLoggedIn);
+  const remainingTime = useSelector((state) => state.auth.remainingTime);
+
+  useEffect(() => {
+    dispatchFn(autoLogout(remainingTime));
+  }, [remainingTime, dispatchFn]);
 
   return (
     <div className="App">
@@ -38,6 +46,7 @@ function App() {
         widgetId="1gadd5hjd"
         ref={tawkMessengerRef}
       />
+      <ToastContainer autoClose={3000} style={{ fontSize: "1.7rem" }} />
     </div>
   );
 }

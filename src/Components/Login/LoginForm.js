@@ -2,9 +2,16 @@ import useInput from "../../hooks/user-input";
 import Button from "../UI/Button/Button";
 import classes from "./LoginForm.module.scss";
 import { useNavigate } from "react-router-dom";
+import { userLogin } from "../../store/auth-actions";
+import { useDispatch } from "react-redux";
+import { useState } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const LoginForm = () => {
   const navigate = useNavigate();
+  const dispatchFn = useDispatch();
+  const [isLoading, setIsLoading] = useState(false);
 
   const {
     value: enteredEmail,
@@ -27,17 +34,33 @@ const LoginForm = () => {
   const formSubmitHandler = (e) => {
     e.preventDefault();
 
-    if (!enteredEmailIsValid) {
-      return;
-    }
+    const afterAuth = (msg, state) => {
+      setIsLoading(false);
+      if (state === "success") {
+        toast.success(msg, {
+          className: `${classes["toast-message"]}`,
+        });
+        setTimeout(() => {
+          navigate("/", { replace: true });
+        }, 800);
+      }
+      if (state === "error") {
+        toast.error(msg);
+      }
 
-    if (!enteredPasswordIsValid) {
-      return;
-    }
-
-    emailInputReset();
-    PasswordInputReset();
-    navigate("/register");
+      emailInputReset();
+      PasswordInputReset();
+    };
+    setIsLoading(true);
+    dispatchFn(
+      userLogin(
+        {
+          email: enteredEmail,
+          password: enteredPassword,
+        },
+        afterAuth
+      )
+    );
   };
 
   let formIsValid = false;
@@ -83,7 +106,7 @@ const LoginForm = () => {
         )}
       </div>
       <Button className={"login-form-btn"} disabled={!formIsValid}>
-        LOGIN
+        {isLoading ? "loading..." : "LOGIN"}
       </Button>
     </form>
   );

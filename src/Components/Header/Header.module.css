@@ -1,0 +1,162 @@
+@import "../../scss/_mixin.scss";
+
+header {
+  position: relative;
+  z-index: 6;
+  color: #fff;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid #555353;
+  margin: 0 auto;
+}
+
+@media (max-width: 68.75em) {
+  header .container {
+    width: 100%;
+    padding: 2.5rem 4.5rem;
+  }
+}
+
+@media (max-width: 50em) {
+  header .container {
+    padding: 2.5rem 2rem;
+  }
+}
+
+@media (max-width: 18.75em) {
+  header .container {
+    padding: 2.5rem 0.5rem;
+  }
+}
+
+.name {
+  font-size: 1.5rem;
+      margin-left: auto;
+
+}
+
+@media (max-width: 59.375em) {
+  .name {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 46.875em) {
+  .name {
+    display: none;
+  }
+}
+
+.icon-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 59.375em) {
+  .icon-div {
+    margin-left: auto;
+  }
+}
+
+.icon-div .icon {
+  height: 2.8rem;
+  width: 2.8rem;
+  margin-left: 1.5rem;
+}
+
+.icon-menu-bar {
+  height: 2.2rem;
+  width: 2.2rem;
+  margin-right: 2rem;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 59.375em) {
+  .icon-menu-bar {
+    display: block;
+  }
+}
+
+.nav-div {
+  margin: 0 auto;
+}
+
+@media (max-width: 59.375em) {
+  .nav-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.98);
+    z-index: 14;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
+}
+
+@media (max-width: 59.375em) {
+  .display-menu {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 59.375em) {
+  .hide-menu {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-black {
+  background-color: #000000;
+}
+
+.cart-box {
+  position: relative;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.cart-box span {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #d87d4a;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.6rem;
+  top: -.5rem;
+  right: -1.5rem;
+}
+/*# sourceMappingURL=Header.module.css.map */

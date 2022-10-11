@@ -1,0 +1,67 @@
+.input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-bottom: 2rem;
+}
+
+.input-box label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.input-box input {
+  padding: 1rem 2rem;
+  outline: none;
+  border-radius: .5rem;
+}
+
+.input-box input::-webkit-input-placeholder {
+  color: #b9b1b1;
+}
+
+.input-box input:-ms-input-placeholder {
+  color: #b9b1b1;
+}
+
+.input-box input::-ms-input-placeholder {
+  color: #b9b1b1;
+}
+
+.input-box input::placeholder {
+  color: #b9b1b1;
+}
+
+.first-box {
+  margin-right: 2rem;
+}
+
+@media (max-width: 46.875em) {
+  .first-box {
+    margin-right: 0;
+  }
+}
+
+.error-input {
+  border: 1px solid #d87d4a;
+}
+
+.normal-input {
+  border: 1px solid #b9b1b1;
+}
+
+.error-text {
+  color: #d87d4a;
+  font-size: 1.2rem;
+  margin-top: .5rem;
+}
+/*# sourceMappingURL=InputComponent.module.css.map */

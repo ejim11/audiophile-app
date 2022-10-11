@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAC;EACZ,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,SAAS;EACjB,WAAW,EAAE,KAAK;CACnB",
+    "sources": [
+        "EarphonesList.module.scss"
+    ],
+    "names": [],
+    "file": "EarphonesList.module.css"
+}

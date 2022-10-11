@@ -1,0 +1,112 @@
+.item-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-column-gap: 4rem;
+}
+
+.item-box-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 2rem;
+}
+
+@media (max-width: 50em) {
+  .item-box-info {
+    padding: 0;
+  }
+}
+
+@media (max-width: 46.875em) {
+  .item-box-info {
+    margin: 3rem 0 0;
+  }
+}
+
+.item-box-info .new-product {
+  font-size: 1.5rem;
+  letter-spacing: 0.4rem;
+  color: #d87d4a;
+}
+
+@media (max-width: 46.875em) {
+  .item-box-info .new-product {
+    letter-spacing: 0.5rem;
+  }
+}
+
+.item-box-info h2 {
+  font-size: 3.5rem;
+  margin: 1.5rem 0;
+  text-transform: uppercase;
+}
+
+.item-box-info .description {
+  font-size: 1.7rem;
+}
+
+.item-box-info .price {
+  font-size: 1.7rem;
+  margin: 1rem 0;
+  font-weight: 800;
+}
+
+.item-box-info .add-to-cart-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0;
+}
+
+.item-box-info .add-to-cart-box .amount-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f1f1f1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.item-box-info .add-to-cart-box .amount-box button {
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #000000;
+}
+
+.item-box-info .add-to-cart-box .amount-box button:hover {
+  background-color: #d87d4a;
+  color: #fff;
+}
+
+.item-box-info .add-to-cart-box .amount-box p {
+  width: 8rem;
+  text-align: center;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=ProductItemBox.module.css.map */

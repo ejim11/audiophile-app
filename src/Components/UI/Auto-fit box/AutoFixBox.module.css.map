@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,aAAa,CAAC;EACZ,OAAO,EAAE,IAAI;CACd",
+    "sources": [
+        "AutoFixBox.module.scss",
+        "../../../scss/_mixin.scss"
+    ],
+    "names": [],
+    "file": "AutoFixBox.module.css"
+}

@@ -1,0 +1,18 @@
+form {
+  width: 35%;
+}
+
+@media (max-width: 68.75em) {
+  form {
+    width: 50%;
+  }
+}
+
+@media (max-width: 46.875em) {
+  form {
+    width: 80%;
+  }
+}
+
+
+/*# sourceMappingURL=RegisterForm.module.css.map */

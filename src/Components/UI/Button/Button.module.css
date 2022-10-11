@@ -1,0 +1,148 @@
+.btn {
+  padding: 1rem 2rem;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.btn-sample-3 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: #fff;
+  background-color: #d87d4a;
+  border: none;
+}
+
+.btn-sample-3:hover {
+  color: #d87d4a;
+  background-color: #fff;
+}
+
+@media (max-width: 68.75em) {
+  .btn-sample-3 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+.btn-sample-1 {
+  color: #fff;
+  background-color: #000000;
+  border: 1px solid #000000;
+}
+
+.btn-sample-1:hover {
+  color: #000000;
+  background-color: transparent;
+}
+
+.btn-sample-2 {
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #000000;
+}
+
+.btn-sample-2:hover {
+  color: #fff;
+  background-color: #000000;
+}
+
+.btn-sample-4 {
+  color: #fff;
+  background-color: #d87d4a;
+  border: none;
+}
+
+.btn-sample-4:hover {
+  color: #d87d4a;
+  background-color: #000000;
+}
+
+.login-btn {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid #fff;
+}
+
+.login-btn:hover {
+  background-color: #d87d4a;
+  border: 1px solid #d87d4a;
+}
+
+.login-form-btn {
+  width: 100%;
+  margin: 2.5rem 0 0;
+  background-color: #000000;
+  color: #fff;
+  border: 1px solid #000000;
+  padding: 2rem 4rem;
+  font-size: 1.7rem;
+}
+
+.login-form-btn:hover {
+  background-color: #d87d4a;
+  border: 1px solid #d87d4a;
+}
+
+.login-form-btn:disabled, .login-form-btn:disabled:hover, .login-form-btn:disabled:active {
+  background-color: #ccc;
+  color: #fff;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+.back-btn {
+  margin: 4rem 0;
+  background-color: #000000;
+  color: #fff;
+  border: 1px solid #000000;
+}
+
+.back-btn:hover {
+  color: #000000;
+  background-color: transparent;
+}
+
+.add-to-cart-btn {
+  margin-left: 2rem;
+  background-color: #d87d4a;
+  color: #fff;
+  border: 1px solid #d87d4a;
+  outline: none;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+.add-to-cart-btn:hover {
+  background-color: transparent;
+  color: #d87d4a;
+}
+
+.see-product-btn {
+  color: #fff;
+  background-color: #d87d4a;
+  border: 1px solid #d87d4a;
+}
+
+.see-product-btn:hover {
+  background-color: transparent;
+  color: #d87d4a;
+}
+
+.checkout-btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  width: 100%;
+  color: #fff;
+  background-color: #d87d4a;
+  border: 1px solid #d87d4a;
+}
+
+.checkout-btn:hover {
+  background-color: transparent;
+  color: #d87d4a;
+}
+/*# sourceMappingURL=Button.module.css.map */

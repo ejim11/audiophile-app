@@ -1,8 +1,18 @@
 import useInput from "../../hooks/user-input";
 import Button from "../UI/Button/Button";
 import classes from "./RegisterForm.module.scss";
+import { useDispatch } from "react-redux";
+import { userRegister } from "../../store/auth-actions";
+import { useState } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 const RegisterForm = () => {
+  const navigate = useNavigate();
+  const dispatchFn = useDispatch();
+  const [isLoading, setIsLoading] = useState(false);
+
   const {
     value: enteredEmail,
     valueIsValid: enteredEmailIsValid,
@@ -42,25 +52,35 @@ const RegisterForm = () => {
   const formSubmitHandler = (e) => {
     e.preventDefault();
 
-    if (!enteredNameIsValid) {
-      return;
-    }
+    setIsLoading(true);
 
-    if (!enteredEmailIsValid) {
-      return;
-    }
+    const afterAuth = (msg, state) => {
+      setIsLoading(false);
+      if (state === "success") {
+        toast.success(msg, {
+          className: `${classes["toast-message"]}`,
+        });
+        navigate("/login", { replace: true });
+      }
+      if (state === "error") {
+        toast.error(msg);
+      }
 
-    if (!enteredPasswordIsValid) {
-      return;
-    }
-    if (!enteredNumberIsValid) {
-      return;
-    }
+      emailInputReset();
+      nameInputReset();
+      numberInputReset();
+      PasswordInputReset();
+    };
 
-    emailInputReset();
-    nameInputReset();
-    numberInputReset();
-    PasswordInputReset();
+    dispatchFn(
+      userRegister(
+        {
+          email: enteredEmail,
+          password: enteredPassword,
+        },
+        afterAuth
+      )
+    );
   };
 
   let formIsValid = false;
@@ -145,7 +165,7 @@ const RegisterForm = () => {
         )}
       </div>
       <Button className={"login-form-btn"} disabled={!formIsValid}>
-        REGISTER
+        {isLoading ? "Loading..." : "REGISTER"}
       </Button>
     </form>
   );

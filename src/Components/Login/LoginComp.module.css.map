@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,UAAU,CAAC;EACT,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,oBAAoB;EAC5B,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,IAAI;EACjB,WAAW,EAAE,MAAM;CAOpB;;AAbD,AAQE,UARQ,CAQN,EAAE,CAAC;EACH,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;EAChB,MAAM,EAAE,QAAQ;CACjB",
+    "sources": [
+        "LoginComp.module.scss",
+        "../../scss/_base.scss"
+    ],
+    "names": [],
+    "file": "LoginComp.module.css"
+}

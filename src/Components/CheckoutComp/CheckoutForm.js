@@ -5,6 +5,7 @@ import classes from "./CheckoutForm.module.scss";
 import cashTransaction from "../../assets/shared/desktop/cashTransaction.svg";
 
 const CheckoutForm = () => {
+  const authCtxLoginState = useSelector((state) => state.auth.isLoggedIn);
   const name = useSelector((state) => state.checkout.name);
   const mail = useSelector((state) => state.checkout.email);
   const phoneNumber = useSelector((state) => state.checkout.phoneNumber);
@@ -27,32 +28,34 @@ const CheckoutForm = () => {
 
   return (
     <form className={classes["checkout-form"]}>
-      <div className={classes["details-div"]}>
-        <h3>BILLING DETAILS</h3>
-        <div className={classes["grid-div"]}>
-          <InputComponent
-            label={"Name"}
-            type={"text"}
-            placeholder={"Alexis Grey"}
-            value={name}
-            field={"name"}
-          />
-          <InputComponent
-            label={"Email Address"}
-            type={"email"}
-            placeholder={"alexisgrey@gmail.com"}
-            value={mail}
-            field={"mail"}
-          />
-          <InputComponent
-            label={"Phone Number"}
-            type={"number"}
-            placeholder={"081-6730-4689"}
-            value={phoneNumber}
-            field={"number"}
-          />
+      {!authCtxLoginState && (
+        <div className={classes["details-div"]}>
+          <h3>BILLING DETAILS</h3>
+          <div className={classes["grid-div"]}>
+            <InputComponent
+              label={"Name"}
+              type={"text"}
+              placeholder={"Alexis Grey"}
+              value={name}
+              field={"name"}
+            />
+            <InputComponent
+              label={"Email Address"}
+              type={"email"}
+              placeholder={"alexisgrey@gmail.com"}
+              value={mail}
+              field={"mail"}
+            />
+            <InputComponent
+              label={"Phone Number"}
+              type={"number"}
+              placeholder={"081-6730-4689"}
+              value={phoneNumber}
+              field={"number"}
+            />
+          </div>
         </div>
-      </div>
+      )}
       <div className={classes["details-div"]}>
         <h3>SHIPPING INFO</h3>
         <InputComponent

@@ -37,6 +37,7 @@ header {
 .name {
   font-size: 1.5rem;
 
+
   @include respond(bigTablet) {
     margin-left: auto;
   }
@@ -49,8 +50,9 @@ header {
 .icon-div {
   display: flex;
   align-items: center;
+  cursor: pointer;
 
-  @include respond(bigTablet) {
+  @include respond(phone) {
     margin-left: auto;
   }
 

@@ -1,0 +1,174 @@
+.swipe-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+  background-color: aliceblue;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.swipe-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 68.75em) {
+  .swipe-info {
+    width: 90%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+
+.swipe-info h3 {
+  font-weight: 300;
+  font-size: 1.4rem;
+  letter-spacing: 1rem;
+  color: #d6b8ac;
+}
+
+.swipe-info .title {
+  width: 40%;
+  margin: 2rem 0;
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+@media (max-width: 68.75em) {
+  .swipe-info .title {
+    width: 100%;
+  }
+}
+
+@media (max-width: 18.75em) {
+  .swipe-info .title {
+    font-size: 3rem;
+  }
+}
+
+.swipe-info .description {
+  width: 30%;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 68.75em) {
+  .swipe-info .description {
+    width: 70%;
+    margin: 0 auto 3rem;
+  }
+}
+
+.product-sample-section {
+  position: relative;
+  z-index: 5;
+  width: 60%;
+  margin: 0 auto 10rem;
+}
+
+@media (max-width: 140.625em) {
+  .product-sample-section {
+    width: 70%;
+  }
+}
+
+@media (max-width: 90em) {
+  .product-sample-section {
+    width: 75%;
+  }
+}
+
+@media (max-width: 68.75em) {
+  .product-sample-section {
+    width: 80%;
+  }
+}
+
+@media (max-width: 59.375em) {
+  .product-sample-section {
+    width: 90%;
+  }
+}
+
+.slide-1 {
+  background-image: url("../../assets/home/desktop/image-hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 50em) {
+  .slide-1 {
+    background-image: url("../../assets/home/tablet/image-header.jpg");
+  }
+}
+
+@media (max-width: 34.375em) {
+  .slide-1 {
+    background-image: url("../../assets/home/mobile/image-header.jpg");
+  }
+}
+
+.slide-2 {
+  background-image: url("../../assets/home/desktop/pexels-daniel-reche-3721941 (3).jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 50em) {
+  .slide-2 {
+    background-image: url("../../assets/home/tablet/pexels-daniel-reche-3721941 (2).jpg");
+  }
+}
+
+@media (max-width: 34.375em) {
+  .slide-2 {
+    background-image: url("../../assets/home/mobile/pexels-daniel-reche-3721941.jpg");
+  }
+}
+
+.slide-3 {
+  background-image: url("../../assets/home/desktop/headphones-3916271.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 50em) {
+  .slide-3 {
+    background-image: url("../../assets/home/tablet/headphones-3916271_1280.jpg");
+  }
+}
+
+@media (max-width: 34.375em) {
+  .slide-3 {
+    background-image: url("../../assets/home/mobile/headphones-3916271_640.jpg");
+  }
+}
+/*# sourceMappingURL=HomeComp.module.css.map */

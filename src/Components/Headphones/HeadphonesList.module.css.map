@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAC;EACd,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,SAAS;EACjB,WAAW,EAAE,KAAK;CACnB",
+    "sources": [
+        "HeadphonesList.module.scss"
+    ],
+    "names": [],
+    "file": "HeadphonesList.module.css"
+}
