@@ -35,3 +35,21 @@ input::placeholder {
   right: 1rem;
   cursor: pointer;
 }
+
+.success-message {
+  color: $color-primary;
+
+  @include respond(phone) {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+.error-message {
+  color: red;
+
+  @include respond(phone) {
+    width: 85%;
+    margin: 0 auto;
+  }
+}

@@ -51,10 +51,8 @@ header {
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin-left: auto;
 
-  @include respond(phone) {
-    margin-left: auto;
-  }
 
   & .icon {
     height: 2.8rem;

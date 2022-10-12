@@ -65,12 +65,14 @@ const RegisterForm = () => {
       setIsLoading(false);
       if (state === "success") {
         toast.success(msg, {
-          className: `${classes["toast-message"]}`,
+          className: `${classes["success-message"]}`,
         });
         navigate("/login", { replace: true });
       }
       if (state === "error") {
-        toast.error(msg);
+        toast.error(msg, {
+          className: `${classes["error-message"]}`,
+        });
       }
 
       emailInputReset();
