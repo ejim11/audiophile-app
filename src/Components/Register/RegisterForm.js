@@ -67,7 +67,11 @@ const RegisterForm = () => {
         toast.success(msg, {
           className: `${classes["success-message"]}`,
         });
-        navigate("/login", { replace: true });
+        new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(navigate("/login", { replace: true }));
+          }, 2000);
+        });
       }
       if (state === "error") {
         toast.error(msg, {

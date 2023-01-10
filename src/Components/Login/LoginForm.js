@@ -41,24 +41,28 @@ const LoginForm = () => {
   const formSubmitHandler = (e) => {
     e.preventDefault();
 
-    const afterAuth = (msg, state) => {
+    setIsLoading(true);
+
+    const afterAuth = async (msg, state) => {
       setIsLoading(false);
       if (state === "success") {
         toast.success(msg, {
           className: `${classes["success-message"]}`,
         });
-        setTimeout(() => {
-          navigate("/", { replace: true });
-        }, 800);
+        new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(navigate("/", { replace: true }));
+          }, 2000);
+        });
+
+        emailInputReset();
+        PasswordInputReset();
       }
       if (state === "error") {
         toast.error(msg, {
           className: `${classes["error-message"]}`,
         });
       }
-
-      emailInputReset();
-      PasswordInputReset();
     };
     setIsLoading(true);
     dispatchFn(
