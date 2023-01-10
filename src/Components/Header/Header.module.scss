@@ -51,7 +51,10 @@ header {
   display: flex;
   align-items: center;
   cursor: pointer;
-  margin-left: auto;
+
+  @include respond(midTablet) {
+    margin-left: auto;
+  }
 
 
   & .icon {
