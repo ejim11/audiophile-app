@@ -44,12 +44,18 @@ export const userLogin = (data, afterAuth) => {
           new Date().getTime() + +data.expiresIn * 1000
         );
 
-        dispatch(
-          authActions.loginHandler({
-            token: data.idToken,
-            expirationTime: expirationTime.toISOString(),
-          })
-        );
+        new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(
+              dispatch(
+                authActions.loginHandler({
+                  token: data.idToken,
+                  expirationTime: expirationTime.toISOString(),
+                })
+              )
+            );
+          }, 1500);
+        });
 
         const remainingTime = calculateExpirationTime(
           expirationTime.toISOString()
@@ -59,7 +65,7 @@ export const userLogin = (data, afterAuth) => {
           dispatch(authActions.logoutHandler());
         }, remainingTime);
 
-        afterAuth("Login succesful!", "success");
+        await afterAuth("Login succesful!", "success");
       } else {
         const data = await res.json();
 
